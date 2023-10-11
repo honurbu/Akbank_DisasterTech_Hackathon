@@ -176,3 +176,5 @@ C:\Users\Onur\Desktop\AkbankHackathon\JwtUser.API\JwtUser.API\obj\Debug\net7.0\r
 C:\Users\Onur\Desktop\AkbankHackathon\JwtUser.API\JwtUser.API\obj\Debug\net7.0\JwtUser.API.pdb
 C:\Users\Onur\Desktop\AkbankHackathon\JwtUser.API\JwtUser.API\obj\Debug\net7.0\JwtUser.API.genruntimeconfig.cache
 C:\Users\Onur\Desktop\AkbankHackathon\JwtUser.API\JwtUser.API\obj\Debug\net7.0\ref\JwtUser.API.dll
+C:\Users\Onur\Desktop\AkbankHackathon\JwtUser.API\JwtUser.API\bin\Debug\net7.0\AutoMapper.dll
+C:\Users\Onur\Desktop\AkbankHackathon\JwtUser.API\JwtUser.API\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

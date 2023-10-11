@@ -4,6 +4,7 @@ using JwtUser.Core.UnitOfWorks;
 using JwtUser.Repository.Context;
 using JwtUser.Repository.Repositories;
 using JwtUser.Repository.UnitOfWorks;
+using JwtUser.Service.Mapping;
 using JwtUser.Service.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -29,7 +30,7 @@ builder.Services.AddScoped<IHelpDemandService, HelpDemandService>();
 builder.Services.AddScoped(typeof(IHelpDemandRepository), typeof(HelpDemandRepository));
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-
+builder.Services.AddAutoMapper(typeof(MapProfile));
 
 //Db created
 builder.Services.AddDbContext<AppDbContext>(x =>

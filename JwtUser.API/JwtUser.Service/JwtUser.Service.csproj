@@ -7,11 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\JwtUser.Repository\JwtUser.Repository.csproj" />
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Mapping\" />
+    <ProjectReference Include="..\JwtUser.Repository\JwtUser.Repository.csproj" />
   </ItemGroup>
 
 </Project>

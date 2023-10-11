@@ -1,4 +1,5 @@
-﻿using JwtUser.Core.Entities;
+﻿using JwtUser.Core.DTOs.Request;
+using JwtUser.Core.Entities;
 using JwtUser.Core.Repositories;
 using JwtUser.Core.Services;
 using JwtUser.Core.UnitOfWorks;
@@ -18,6 +19,11 @@ namespace JwtUser.Service.Services
         public HelpDemandService(IGenericRepository<HelpDemand> genericRepository, IUnitOfWork unitOfWork, IHelpDemandRepository helpDemandRepository) : base(genericRepository, unitOfWork)
         {
             _helpDemandRepository = helpDemandRepository;
+        }
+
+        public async Task AddHelpDemand(AddHelpDemandDto helpDemand)
+        {
+            await _helpDemandRepository.AddHelpDemand(helpDemand);
         }
     }
 }
