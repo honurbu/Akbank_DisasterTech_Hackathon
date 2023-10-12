@@ -19,23 +19,33 @@ namespace JwtUser.Repository.Repositories
         public async Task AddHelpDemand(AddHelpDemandDto helpDemand)
         {
             string districtName = helpDemand.DistrictName;
+            string countyName = helpDemand.CountyName;
 
-            var matchingDistrict = _dbContext.Districts.FirstOrDefault(d => d.Name == districtName);
-            if (matchingDistrict != null)
+            var matchingCounty = _dbContext.Counties.FirstOrDefault(c => c.Name == countyName); // İlçe (county) için arama
+
+            if (matchingCounty != null)
             {
-                var helpDemands = new HelpDemand
-                {
-                    CategoryId = helpDemand.CategoryId,
-                    Date = DateTime.Now,
-                    Latitude = helpDemand.Latitude,
-                    Longitude = helpDemand.Longitude,
-                    DistrictId = matchingDistrict.Id // Eşleşen mahallenin Id'sini ata
-                };
+                var countyId = matchingCounty.Id; // İlçe (county) ID'sini al
 
-                _dbContext.HelpDemands.Add(helpDemands);
-                await _dbContext.SaveChangesAsync(); // Async olarak veritabanına kaydedin
+                var matchingDistrict = _dbContext.Districts.FirstOrDefault(d => d.Name == districtName && d.CountyId == countyId); // İlçe bölgesini (district) arama
+
+                if (matchingDistrict != null)
+                {
+                    var helpDemands = new HelpDemand
+                    {
+                        CategoryId = helpDemand.CategoryId,
+                        Date = DateTime.Now,
+                        Latitude = helpDemand.Latitude,
+                        Longitude = helpDemand.Longitude,
+                        DistrictId = matchingDistrict.Id // İlçe bölgesinin (district) ID'sini ata
+                    };
+
+                    _dbContext.HelpDemands.Add(helpDemands);
+                    await _dbContext.SaveChangesAsync(); 
+                }
             }
         }
+
 
     }
 }
