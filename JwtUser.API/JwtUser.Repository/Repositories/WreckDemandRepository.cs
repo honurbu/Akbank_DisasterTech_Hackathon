@@ -2,6 +2,7 @@
 using JwtUser.Core.Entities;
 using JwtUser.Core.Repositories;
 using JwtUser.Repository.Context;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,6 +48,14 @@ namespace JwtUser.Repository.Repositories
                     throw new NullReferenceException();
                 }
             }
+        }
+
+        public async Task<(float AverageLatitude, float AverageLongitude)> AverageWreckLocation()
+        {
+            float averageLatitude = await _dbContext.WreckDemands.AverageAsync(x => x.Latitude);
+            float averageLongitude = await _dbContext.WreckDemands.AverageAsync(x => x.Longitude);
+
+            return (averageLatitude, averageLongitude);
         }
     }
 }

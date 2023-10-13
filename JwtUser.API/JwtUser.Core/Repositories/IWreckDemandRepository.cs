@@ -11,6 +11,7 @@ namespace JwtUser.Core.Repositories
     public interface IWreckDemandRepository : IGenericRepository<WreckDemand>
     {
         public Task AddWreckDemand(AddWreckDemandDto wreckDemand);
+        public Task<(float AverageLatitude, float AverageLongitude)> AverageWreckLocation();
 
     }
 }

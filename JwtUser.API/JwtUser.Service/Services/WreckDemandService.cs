@@ -24,5 +24,10 @@ namespace JwtUser.Service.Services
         {
             await _wreckDemandRepository.AddWreckDemand(wreckDemand);
         }
+
+        public async Task<(float AverageLatitude, float AverageLongitude)> AverageWreckLocation()
+        {
+            return await _wreckDemandRepository.AverageWreckLocation();
+        }
     }
 }

@@ -22,5 +22,17 @@ namespace JwtUser.API.Controllers
             await _wreckDemandService.AddWreckDemand(wreckDemandDto);
             return Ok("Data successfully added !");
         }
+
+        [HttpGet]
+        public async Task<IActionResult> AverageWreckLocation()
+        {
+            var values = await _wreckDemandService.AverageWreckLocation();
+
+            return Ok(new
+            { 
+                AverageLatitude = values.AverageLatitude, 
+                AverageLongitude = values.AverageLongitude 
+            });
+        }
     }
 }
