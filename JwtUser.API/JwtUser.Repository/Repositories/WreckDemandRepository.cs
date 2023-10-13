@@ -10,16 +10,16 @@ using System.Threading.Tasks;
 
 namespace JwtUser.Repository.Repositories
 {
-    public class HelpDemandRepository : GenericRepository<HelpDemand>, IHelpDemandRepository
+    public class WreckDemandRepository : GenericRepository<WreckDemand>, IWreckDemandRepository
     {
-        public HelpDemandRepository(AppDbContext dbContext) : base(dbContext)
+        public WreckDemandRepository(AppDbContext dbContext) : base(dbContext)
         {
         }
 
-        public async Task AddHelpDemand(AddHelpDemandDto helpDemand)
+        public async Task AddWreckDemand(AddWreckDemandDto wreckDemand)
         {
-            string districtName = helpDemand.DistrictName;
-            string countyName = helpDemand.CountyName;
+            string districtName = wreckDemand.DistrictName;
+            string countyName = wreckDemand.CountyName;
 
             var matchingCounty = _dbContext.Counties.FirstOrDefault(c => c.Name == countyName); // İlçe (county) için arama
 
@@ -31,17 +31,16 @@ namespace JwtUser.Repository.Repositories
 
                 if (matchingDistrict != null)
                 {
-                    var helpDemands = new HelpDemand
+                    var wreckDemands = new WreckDemand
                     {
-                        CategoryId = helpDemand.CategoryId,
                         Date = DateTime.Now,
-                        Latitude = helpDemand.Latitude,
-                        Longitude = helpDemand.Longitude,
+                        Latitude = wreckDemand.Latitude,
+                        Longitude = wreckDemand.Longitude,
                         DistrictId = matchingDistrict.Id // İlçe bölgesinin (district) ID'sini ata
                     };
 
-                    _dbContext.HelpDemands.Add(helpDemands);
-                    await _dbContext.SaveChangesAsync(); 
+                    _dbContext.WreckDemands.Add(wreckDemands);
+                    await _dbContext.SaveChangesAsync();
                 }
                 else
                 {
@@ -49,7 +48,5 @@ namespace JwtUser.Repository.Repositories
                 }
             }
         }
-
-
     }
 }

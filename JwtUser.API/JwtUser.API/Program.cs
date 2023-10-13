@@ -29,6 +29,9 @@ builder.Services.AddScoped(typeof(IGenericService<>), typeof(GenericService<>));
 builder.Services.AddScoped<IHelpDemandService, HelpDemandService>();
 builder.Services.AddScoped(typeof(IHelpDemandRepository), typeof(HelpDemandRepository));
 
+builder.Services.AddScoped<IWreckDemandService, WreckDemandService>();
+builder.Services.AddScoped(typeof(IWreckDemandRepository), typeof(WreckDemandRepository));
+
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddAutoMapper(typeof(MapProfile));
 
