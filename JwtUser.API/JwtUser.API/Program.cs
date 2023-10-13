@@ -32,6 +32,10 @@ builder.Services.AddScoped(typeof(IHelpDemandRepository), typeof(HelpDemandRepos
 builder.Services.AddScoped<IWreckDemandService, WreckDemandService>();
 builder.Services.AddScoped(typeof(IWreckDemandRepository), typeof(WreckDemandRepository));
 
+
+builder.Services.AddScoped<IGatheringCenterService, GatheringCenterService>();
+builder.Services.AddScoped(typeof(IGatheringCenterRepository), typeof(GatheringCenterRepository));
+
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddAutoMapper(typeof(MapProfile));
 
