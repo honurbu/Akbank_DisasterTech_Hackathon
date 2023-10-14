@@ -2,6 +2,7 @@
 using JwtUser.Core.Entities;
 using JwtUser.Core.Repositories;
 using JwtUser.Repository.Context;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -50,6 +51,12 @@ namespace JwtUser.Repository.Repositories
             }
         }
 
+        public async Task<(float AverageLatitude, float AverageLongitude)> AverageHelpLocation(int id)
+        {
+            float averageLatitude = await _dbContext.HelpDemands.Where(x=>x.CategoryId==id).AverageAsync(x => x.Latitude);
+            float averageLongitude = await _dbContext.HelpDemands.Where(x => x.CategoryId == id).AverageAsync(x => x.Longitude);
 
+            return (averageLatitude, averageLongitude);
+        }
     }
 }

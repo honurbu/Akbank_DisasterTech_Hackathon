@@ -9,6 +9,7 @@ namespace JwtUser.Core.Repositories
 {
     public interface IGatheringCenterRepository : IGenericRepository<GatheringCenter>
     {
-       Task<BaseCenter> NearGatheringCenter(float longitude, float latitude);
+       Task<(BaseCenter, float distance)> NearGatheringCenter(float longitude, float latitude);
+       Task<List<BaseCenter>> NearGatheringCenters(float longitude, float latitude);
     }
 }

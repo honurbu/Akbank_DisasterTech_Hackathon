@@ -11,5 +11,8 @@ namespace JwtUser.Core.Repositories
     public interface IHelpDemandRepository : IGenericRepository<HelpDemand>
     {
         public Task AddHelpDemand(AddHelpDemandDto helpDemand);
+
+        public Task<(float AverageLatitude, float AverageLongitude)> AverageHelpLocation(int id);
+
     }
 }

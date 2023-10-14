@@ -19,6 +19,7 @@ namespace JwtUser.Core.Entities
         public float Longitude { get; set; }        //boylam
         public float Latitude { get; set; }         //enlem
         public int DistrictId { get; set; }
+        //public bool IsCanGo { get; set; }
 
         [JsonIgnore]
         public DateTime Date { get; set; }

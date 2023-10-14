@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace JwtUser.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class GatheringCenterController : ControllerBase
     {
@@ -16,10 +16,18 @@ namespace JwtUser.API.Controllers
         }
 
 
-        [HttpPost]
+        [HttpGet]
         public async Task<IActionResult> GetNearestGatheringCenter(float longitude, float latitude)
         {
-            return Ok(await _gatheringCenterService.NearGatheringCenter(longitude,latitude));
+            var values = await _gatheringCenterService.NearGatheringCenter(longitude, latitude);
+            return Ok(new
+            {
+                Name = values.Item1.Name,
+                Longitude = values.Item1.Longitude,
+                Latitude= values.Item1.Latitude,
+                Distance = values.distance
+
+            });
         }
     }
 }

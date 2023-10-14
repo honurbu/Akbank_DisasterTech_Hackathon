@@ -19,7 +19,12 @@ namespace JwtUser.Service.Services
             _gatheringCenterRepository = gatheringCenterRepository;
         }
 
-        public async Task<BaseCenter> NearGatheringCenter(float longitude, float latitude)
+        public Task<List<BaseCenter>> ListNearGatheringCenters(float longitude, float latitude)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<(BaseCenter, float distance)> NearGatheringCenter(float longitude, float latitude)
         {
             return await _gatheringCenterRepository.NearGatheringCenter(longitude, latitude);
         }

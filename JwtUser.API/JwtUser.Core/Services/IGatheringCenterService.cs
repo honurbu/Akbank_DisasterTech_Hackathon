@@ -10,7 +10,8 @@ namespace JwtUser.Core.Services
 {
     public interface IGatheringCenterService : IGenericService<GatheringCenter>
     {
-        Task<BaseCenter> NearGatheringCenter(float longitude, float latitude);
+        Task<(BaseCenter, float distance)> NearGatheringCenter (float longitude, float latitude);
+        Task<List<BaseCenter>> ListNearGatheringCenters(float longitude, float latitude);
 
     }
 }

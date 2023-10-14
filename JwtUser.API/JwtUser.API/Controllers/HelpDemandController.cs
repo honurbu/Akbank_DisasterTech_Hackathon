@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace JwtUser.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class HelpDemandController : ControllerBase
     {
@@ -26,6 +26,19 @@ namespace JwtUser.API.Controllers
         {
             await _helpDemandService.AddHelpDemand(helpDemand);
             return Ok("Data added!");
+        }
+
+
+        [HttpGet]
+        public async Task<IActionResult> AverageHelpLocation(int categoryId)
+        {
+            var values = await _helpDemandService.AverageHelpLocation(categoryId);
+
+            return Ok(new
+            {
+                AverageLatitude = values.AverageLatitude,
+                AverageLongitude = values.AverageLongitude
+            });
         }
     }
 }
