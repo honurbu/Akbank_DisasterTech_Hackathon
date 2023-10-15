@@ -1,0 +1,34 @@
+C:\Users\sekii\OneDrive\Masaüstü\DisasterTechGitHub\AtomWeb.API\ATOM.Repository\bin\Release\net7.0\ATOM.Repository.deps.json
+C:\Users\sekii\OneDrive\Masaüstü\DisasterTechGitHub\AtomWeb.API\ATOM.Repository\bin\Release\net7.0\ATOM.Repository.runtimeconfig.json
+C:\Users\sekii\OneDrive\Masaüstü\DisasterTechGitHub\AtomWeb.API\ATOM.Repository\bin\Release\net7.0\ATOM.Repository.dll
+C:\Users\sekii\OneDrive\Masaüstü\DisasterTechGitHub\AtomWeb.API\ATOM.Repository\bin\Release\net7.0\ATOM.Repository.pdb
+C:\Users\sekii\OneDrive\Masaüstü\DisasterTechGitHub\AtomWeb.API\ATOM.Repository\bin\Release\net7.0\ATOM.Core.dll
+C:\Users\sekii\OneDrive\Masaüstü\DisasterTechGitHub\AtomWeb.API\ATOM.Repository\bin\Release\net7.0\ATOM.Core.pdb
+C:\Users\sekii\OneDrive\Masaüstü\DisasterTechGitHub\AtomWeb.API\ATOM.Repository\obj\Release\net7.0\ATOM.Repository.csproj.AssemblyReference.cache
+C:\Users\sekii\OneDrive\Masaüstü\DisasterTechGitHub\AtomWeb.API\ATOM.Repository\obj\Release\net7.0\ATOM.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sekii\OneDrive\Masaüstü\DisasterTechGitHub\AtomWeb.API\ATOM.Repository\obj\Release\net7.0\ATOM.Repository.AssemblyInfoInputs.cache
+C:\Users\sekii\OneDrive\Masaüstü\DisasterTechGitHub\AtomWeb.API\ATOM.Repository\obj\Release\net7.0\ATOM.Repository.AssemblyInfo.cs
+C:\Users\sekii\OneDrive\Masaüstü\DisasterTechGitHub\AtomWeb.API\ATOM.Repository\obj\Release\net7.0\ATOM.Repository.csproj.CoreCompileInputs.cache
+C:\Users\sekii\OneDrive\Masaüstü\DisasterTechGitHub\AtomWeb.API\ATOM.Repository\obj\Release\net7.0\ATOM.Repository.csproj.CopyComplete
+C:\Users\sekii\OneDrive\Masaüstü\DisasterTechGitHub\AtomWeb.API\ATOM.Repository\obj\Release\net7.0\ATOM.Repository.dll
+C:\Users\sekii\OneDrive\Masaüstü\DisasterTechGitHub\AtomWeb.API\ATOM.Repository\obj\Release\net7.0\refint\ATOM.Repository.dll
+C:\Users\sekii\OneDrive\Masaüstü\DisasterTechGitHub\AtomWeb.API\ATOM.Repository\obj\Release\net7.0\ATOM.Repository.pdb
+C:\Users\sekii\OneDrive\Masaüstü\DisasterTechGitHub\AtomWeb.API\ATOM.Repository\obj\Release\net7.0\ATOM.Repository.genruntimeconfig.cache
+C:\Users\sekii\OneDrive\Masaüstü\DisasterTechGitHub\AtomWeb.API\ATOM.Repository\obj\Release\net7.0\ref\ATOM.Repository.dll
+C:\Users\Onur\Desktop\Akbank İlkay Repo\AkbankDisasterTech-master\AtomWeb.API\ATOM.Repository\bin\Release\net7.0\ATOM.Repository.deps.json
+C:\Users\Onur\Desktop\Akbank İlkay Repo\AkbankDisasterTech-master\AtomWeb.API\ATOM.Repository\bin\Release\net7.0\ATOM.Repository.runtimeconfig.json
+C:\Users\Onur\Desktop\Akbank İlkay Repo\AkbankDisasterTech-master\AtomWeb.API\ATOM.Repository\bin\Release\net7.0\ATOM.Repository.dll
+C:\Users\Onur\Desktop\Akbank İlkay Repo\AkbankDisasterTech-master\AtomWeb.API\ATOM.Repository\bin\Release\net7.0\ATOM.Repository.pdb
+C:\Users\Onur\Desktop\Akbank İlkay Repo\AkbankDisasterTech-master\AtomWeb.API\ATOM.Repository\bin\Release\net7.0\ATOM.Core.dll
+C:\Users\Onur\Desktop\Akbank İlkay Repo\AkbankDisasterTech-master\AtomWeb.API\ATOM.Repository\bin\Release\net7.0\ATOM.Core.pdb
+C:\Users\Onur\Desktop\Akbank İlkay Repo\AkbankDisasterTech-master\AtomWeb.API\ATOM.Repository\obj\Release\net7.0\ATOM.Repository.csproj.AssemblyReference.cache
+C:\Users\Onur\Desktop\Akbank İlkay Repo\AkbankDisasterTech-master\AtomWeb.API\ATOM.Repository\obj\Release\net7.0\ATOM.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Onur\Desktop\Akbank İlkay Repo\AkbankDisasterTech-master\AtomWeb.API\ATOM.Repository\obj\Release\net7.0\ATOM.Repository.AssemblyInfoInputs.cache
+C:\Users\Onur\Desktop\Akbank İlkay Repo\AkbankDisasterTech-master\AtomWeb.API\ATOM.Repository\obj\Release\net7.0\ATOM.Repository.AssemblyInfo.cs
+C:\Users\Onur\Desktop\Akbank İlkay Repo\AkbankDisasterTech-master\AtomWeb.API\ATOM.Repository\obj\Release\net7.0\ATOM.Repository.csproj.CoreCompileInputs.cache
+C:\Users\Onur\Desktop\Akbank İlkay Repo\AkbankDisasterTech-master\AtomWeb.API\ATOM.Repository\obj\Release\net7.0\ATOM.Repository.csproj.CopyComplete
+C:\Users\Onur\Desktop\Akbank İlkay Repo\AkbankDisasterTech-master\AtomWeb.API\ATOM.Repository\obj\Release\net7.0\ATOM.Repository.dll
+C:\Users\Onur\Desktop\Akbank İlkay Repo\AkbankDisasterTech-master\AtomWeb.API\ATOM.Repository\obj\Release\net7.0\refint\ATOM.Repository.dll
+C:\Users\Onur\Desktop\Akbank İlkay Repo\AkbankDisasterTech-master\AtomWeb.API\ATOM.Repository\obj\Release\net7.0\ATOM.Repository.pdb
+C:\Users\Onur\Desktop\Akbank İlkay Repo\AkbankDisasterTech-master\AtomWeb.API\ATOM.Repository\obj\Release\net7.0\ATOM.Repository.genruntimeconfig.cache
+C:\Users\Onur\Desktop\Akbank İlkay Repo\AkbankDisasterTech-master\AtomWeb.API\ATOM.Repository\obj\Release\net7.0\ref\ATOM.Repository.dll
