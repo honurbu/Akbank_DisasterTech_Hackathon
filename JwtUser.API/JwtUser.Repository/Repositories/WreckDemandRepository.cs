@@ -22,36 +22,92 @@ namespace JwtUser.Repository.Repositories
             string districtName = wreckDemand.DistrictName;
             string countyName = wreckDemand.CountyName;
 
-            var matchingCounty = _dbContext.Counties.FirstOrDefault(c => c.Name == countyName); // İlçe (county) için arama
+            var matchingCounty = _dbContext.Counties.FirstOrDefault(c => c.Name == countyName);
 
-            if (matchingCounty != null)
+            if (matchingCounty == null)
             {
-                var countyId = matchingCounty.Id; // İlçe (county) ID'sini al
-
-                var matchingDistrict = _dbContext.Districts.FirstOrDefault(d => d.Name == districtName && d.CountyId == countyId); // İlçe bölgesini (district) arama
-
-                if (matchingDistrict != null)
+                // County veritabanında yoksa ekleyin
+                var newCounty = new County
                 {
+                    Name = countyName,
+                    CityId = 1
+                };
+                _dbContext.Counties.Add(newCounty);
+                await _dbContext.SaveChangesAsync();
+
+                // Yeni eklenen County'in ID'sini alın
+                var countyId = newCounty.Id;
+
+                // District veritabanında yoksa ekleyin
+                var matchingDistrict = _dbContext.Districts.FirstOrDefault(d => d.Name == districtName && d.CountyId == countyId);
+                if (matchingDistrict == null)
+                {
+                    var newDistrict = new District
+                    {
+                        Name = districtName,
+                        CountyId = countyId
+                    };
+                    _dbContext.Districts.Add(newDistrict);
+                    await _dbContext.SaveChangesAsync();
+                    // Şimdi yeni District'in ID'sini alabilirsiniz.
+                    var districtId = newDistrict.Id;
+
+                    // WreckDemand eklemeyi gerçekleştirin
                     var wreckDemands = new WreckDemand
                     {
                         Date = DateTime.Now,
                         Latitude = wreckDemand.Latitude,
                         Longitude = wreckDemand.Longitude,
-                        DistrictId = matchingDistrict.Id // İlçe bölgesinin (district) ID'sini ata
+                        DistrictId = districtId
                     };
+                    _dbContext.WreckDemands.Add(wreckDemands);
+                    await _dbContext.SaveChangesAsync();
+                }
+            }
+            else
+            {
+                // Var olan County'in ID'sini alın
+                var countyId = matchingCounty.Id;
 
+                // İlçeyi kontrol edin
+                var matchingDistrict = _dbContext.Districts.FirstOrDefault(d => d.Name == districtName && d.CountyId == countyId);
+                if (matchingDistrict == null)
+                {
+                    var newDistrict = new District
+                    {
+                        Name = districtName,
+                        CountyId = countyId
+                    };
+                    _dbContext.Districts.Add(newDistrict);
+                    await _dbContext.SaveChangesAsync();
+                    // Şimdi yeni District'in ID'sini alabilirsiniz.
+                    var districtId = newDistrict.Id;
+
+                    // WreckDemand eklemeyi gerçekleştirin
+                    var wreckDemands = new WreckDemand
+                    {
+                        Date = DateTime.Now,
+                        Latitude = wreckDemand.Latitude,
+                        Longitude = wreckDemand.Longitude,
+                        DistrictId = districtId
+                    };
                     _dbContext.WreckDemands.Add(wreckDemands);
                     await _dbContext.SaveChangesAsync();
                 }
                 else
                 {
-                    throw new NullReferenceException();
+                    // District zaten mevcut, WreckDemand eklemeyi gerçekleştirin
+                    var wreckDemands = new WreckDemand
+                    {
+                        Date = DateTime.Now,
+                        Latitude = wreckDemand.Latitude,
+                        Longitude = wreckDemand.Longitude,
+                        DistrictId = matchingDistrict.Id
+                    };
+                    _dbContext.WreckDemands.Add(wreckDemands);
+                    await _dbContext.SaveChangesAsync();
                 }
             }
-            //else
-            //{
-            //    await _dbContext.Counties.AddAsync(matchingCounty);
-            //}
         }
 
         public async Task<(float AverageLatitude, float AverageLongitude)> AverageWreckLocation()
