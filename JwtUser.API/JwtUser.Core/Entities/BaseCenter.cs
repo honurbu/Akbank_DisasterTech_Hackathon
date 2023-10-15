@@ -12,5 +12,9 @@ namespace JwtUser.Core.Entities
         public string Name { get; set; }
         public float Longitude { get; set; }        //boylam
         public float Latitude { get; set; }         //enlem
+
+        public int? CenterTypeId { get; set; }
+        public CenterType CenterType { get; set; }
+
     }
 }

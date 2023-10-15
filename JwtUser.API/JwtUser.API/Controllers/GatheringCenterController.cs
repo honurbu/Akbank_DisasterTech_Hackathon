@@ -25,7 +25,8 @@ namespace JwtUser.API.Controllers
                 Name = values.Item1.Name,
                 Longitude = values.Item1.Longitude,
                 Latitude= values.Item1.Latitude,
-                Distance = values.distance
+                Distance = values.distance,
+                Type = values.Item1.CenterType.Name
 
             });
         }

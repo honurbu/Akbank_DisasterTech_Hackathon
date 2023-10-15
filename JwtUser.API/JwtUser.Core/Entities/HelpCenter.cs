@@ -10,8 +10,7 @@ namespace JwtUser.Core.Entities
     public class HelpCenter : BaseCenter
     {
 
-      
-
+       
         [JsonIgnore]
         public ICollection<HelpCenterCategories> HelpCenterCategories { get; set; }
 

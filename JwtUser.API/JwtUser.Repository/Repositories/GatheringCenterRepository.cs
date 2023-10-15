@@ -24,7 +24,7 @@ namespace JwtUser.Repository.Repositories
             GatheringCenter closestGatheringCenter;
             float distanceKm = 0;
 
-            closestHelpCenter = await _dbContext.HelpCenters
+            closestHelpCenter = await _dbContext.HelpCenters.Include(x=>x.CenterType)
             .OrderBy(gc => Math.Pow(gc.Longitude - longitude, 2) + Math.Pow(gc.Latitude - latitude, 2))
             .FirstOrDefaultAsync();
 
@@ -56,12 +56,12 @@ namespace JwtUser.Repository.Repositories
             }
             else
             {
-                closestGatheringCenter = await _dbContext.GatheringCenters
+                closestGatheringCenter = await _dbContext.GatheringCenters.Include(x => x.CenterType)
                 .OrderBy(gc => Math.Pow(gc.Longitude - longitude, 2) + Math.Pow(gc.Latitude - latitude, 2))
                 .FirstOrDefaultAsync();
 
                 var radius = 6371;
-                var dLat = Deg2Rad(closestGatheringCenter!.Latitude - latitude);
+                var dLat = Deg2Rad(closestGatheringCenter.Latitude - latitude);
                 var dLong = Deg2Rad(closestGatheringCenter.Longitude - longitude);
 
 

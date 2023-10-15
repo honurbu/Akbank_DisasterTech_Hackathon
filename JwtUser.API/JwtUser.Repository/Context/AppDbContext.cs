@@ -25,7 +25,9 @@ namespace JwtUser.Repository.Context
         public DbSet<HelpCenter> HelpCenters { get; set; }
         public DbSet<HelpDemand> HelpDemands { get; set; }
         public DbSet<WreckDemand> WreckDemands { get; set; }
+        public DbSet<CenterType> CenterTypes { get; set; }
         public DbSet<HelpCenterCategories> HelpCenterCategories { get; set; }
+
     }
 
 }

@@ -39,6 +39,23 @@ namespace JwtUser.Repository.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("JwtUser.Core.Entities.CenterType", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CenterTypes");
+                });
+
             modelBuilder.Entity("JwtUser.Core.Entities.City", b =>
                 {
                     b.Property<int>("Id")
@@ -108,6 +125,9 @@ namespace JwtUser.Repository.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("CenterTypeId")
+                        .HasColumnType("int");
+
                     b.Property<float>("Latitude")
                         .HasColumnType("real");
 
@@ -119,6 +139,8 @@ namespace JwtUser.Repository.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CenterTypeId");
 
                     b.ToTable("GatheringCenters");
                 });
@@ -131,6 +153,9 @@ namespace JwtUser.Repository.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("CenterTypeId")
+                        .HasColumnType("int");
+
                     b.Property<float>("Latitude")
                         .HasColumnType("real");
 
@@ -142,6 +167,8 @@ namespace JwtUser.Repository.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CenterTypeId");
 
                     b.ToTable("HelpCenters");
                 });
@@ -463,6 +490,28 @@ namespace JwtUser.Repository.Migrations
                     b.Navigation("County");
                 });
 
+            modelBuilder.Entity("JwtUser.Core.Entities.GatheringCenter", b =>
+                {
+                    b.HasOne("JwtUser.Core.Entities.CenterType", "CenterType")
+                        .WithMany("GatheringCenters")
+                        .HasForeignKey("CenterTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("CenterType");
+                });
+
+            modelBuilder.Entity("JwtUser.Core.Entities.HelpCenter", b =>
+                {
+                    b.HasOne("JwtUser.Core.Entities.CenterType", "CenterType")
+                        .WithMany("HelpCenters")
+                        .HasForeignKey("CenterTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("CenterType");
+                });
+
             modelBuilder.Entity("JwtUser.Core.Entities.HelpCenterCategories", b =>
                 {
                     b.HasOne("JwtUser.Core.Entities.Category", null)
@@ -558,6 +607,13 @@ namespace JwtUser.Repository.Migrations
                     b.Navigation("HelpCenterCategories");
 
                     b.Navigation("HelpDemands");
+                });
+
+            modelBuilder.Entity("JwtUser.Core.Entities.CenterType", b =>
+                {
+                    b.Navigation("GatheringCenters");
+
+                    b.Navigation("HelpCenters");
                 });
 
             modelBuilder.Entity("JwtUser.Core.Entities.City", b =>
