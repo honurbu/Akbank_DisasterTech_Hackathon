@@ -9,7 +9,7 @@ namespace ATOM.Core.Repositories
 {
     public interface IGatheringCenterRepository : IGenericRepository<GatheringCenter>
     {
-        Task<(BaseCenter, decimal distance)> NearGatheringCenter(decimal longitude, decimal latitude);
+        Task<(BaseCenter, float distance)> NearGatheringCenter(decimal longitude, decimal latitude);
         Task<List<BaseCenter>> NearGatheringCenters(decimal longitude, decimal latitude);
     }
 }

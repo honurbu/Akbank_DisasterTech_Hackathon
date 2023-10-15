@@ -4,7 +4,7 @@
     <ActiveDebugProfile>IIS Express</ActiveDebugProfile>
     <Controller_SelectedScaffolderID>ApiControllerEmptyScaffolder</Controller_SelectedScaffolderID>
     <Controller_SelectedScaffolderCategoryPath>root/Common/Api</Controller_SelectedScaffolderCategoryPath>
-    <NameOfLastUsedPublishProfile>C:\Users\Onur\Desktop\Akbank İlkay Repo\AkbankDisasterTech-master\AtomWeb.API\ATOM.API\Properties\PublishProfiles\FolderProfile8.pubxml</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>C:\Users\Onur\Desktop\Akbank İlkay Repo\AkbankDisasterTech-master\AtomWeb.API\ATOM.API\Properties\PublishProfiles\FolderProfile10.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>

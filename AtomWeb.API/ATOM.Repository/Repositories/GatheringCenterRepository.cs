@@ -18,11 +18,11 @@ namespace ATOM.Repository.Repositories
 
 
 
-        public async Task<(BaseCenter, decimal distance)> NearGatheringCenter(decimal longitude, decimal latitude)
+        public async Task<(BaseCenter, float distance)> NearGatheringCenter(decimal longitude, decimal latitude)
         {
             HelpCenter closestHelpCenter;
             GatheringCenter closestGatheringCenter;
-            decimal distanceKm = 0;
+            float distanceKm = 0;
 
             closestHelpCenter = await _dbContext.HelpCenters.Include(x => x.CenterType)
             .OrderBy(gc => Math.Pow(Convert.ToDouble(gc.Longitude) - Convert.ToDouble(longitude), 2) + Math.Pow(Convert.ToDouble(gc.Latitude) - Convert.ToDouble(latitude), 2))
@@ -36,15 +36,14 @@ namespace ATOM.Repository.Repositories
                 var dLat = Deg2Rad((Convert.ToDouble(closestHelpCenter.Latitude - latitude)));
                 var dLong = Deg2Rad((Convert.ToDouble(closestHelpCenter.Longitude - longitude)));
 
-
                 double a = Math.Sin(dLat / 2) * Math.Sin(dLat / 2) +
-                    Math.Cos(Deg2Rad((Convert.ToDouble(latitude)) * Math.Cos(Deg2Rad((Convert.ToDouble(closestHelpCenter.Latitude))) *
-                    Math.Sin(dLong / 2) * Math.Sin(dLong / 2))));
+                    Math.Cos(Deg2Rad(Convert.ToDouble(latitude))) * Math.Cos(Deg2Rad(Convert.ToDouble(closestHelpCenter.Latitude))) *
+                    Math.Sin(dLong / 2) * Math.Sin(dLong / 2);
 
                 double c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
                 double d = radius * c;
 
-                distanceKm = (decimal)d;
+                distanceKm = (float)d;
 
                 #endregion
 
@@ -66,30 +65,30 @@ namespace ATOM.Repository.Repositories
 
 
                 double a = Math.Sin(dLat / 2) * Math.Sin(dLat / 2) +
-                    Math.Cos(Deg2Rad(Convert.ToDouble(latitude)) * Math.Cos(Deg2Rad((Convert.ToDouble(closestGatheringCenter.Latitude))) *
-                    Math.Sin(dLong / 2) * Math.Sin(dLong / 2)));
+                   Math.Cos(Deg2Rad(Convert.ToDouble(latitude))) * Math.Cos(Deg2Rad(Convert.ToDouble(closestHelpCenter.Latitude))) *
+                   Math.Sin(dLong / 2) * Math.Sin(dLong / 2);
 
                 double c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
                 double d = radius * c;
 
                 if (closestHelpCenter != null)
                 {
-                    if (distanceKm > (decimal)d + 2)
+                    if (distanceKm > (float)d + 2)
                     {
-                        distanceKm = (decimal)d;
+                        distanceKm = (float)d;
 
                         return (closestGatheringCenter, distanceKm);
                     }
                     else
                     {
-                        distanceKm = (decimal)d;
+                        distanceKm = (float)d;
 
                         return (closestHelpCenter, distanceKm);
                     }
 
                 }
 
-                distanceKm = (decimal)d;
+                distanceKm = (float)d;
 
                 return (closestGatheringCenter, distanceKm);
             }

@@ -24,7 +24,7 @@ namespace ATOM.Service.Services
             throw new NotImplementedException();
         }
 
-        public async Task<(BaseCenter, decimal distance)> NearGatheringCenter(decimal longitude, decimal latitude)
+        public async Task<(BaseCenter, float distance)> NearGatheringCenter(decimal longitude, decimal latitude)
         {
             return await _gatheringCenterRepository.NearGatheringCenter(longitude, latitude);
         }

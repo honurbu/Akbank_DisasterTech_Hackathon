@@ -9,7 +9,7 @@ namespace ATOM.Core.Services
 {
     public interface IGatheringCenterService : IGenericService<GatheringCenter>
     {
-        Task<(BaseCenter, decimal distance)> NearGatheringCenter(decimal longitude, decimal latitude);
+        Task<(BaseCenter, float distance)> NearGatheringCenter(decimal longitude, decimal latitude);
         Task<List<BaseCenter>> ListNearGatheringCenters(decimal longitude, decimal latitude);
 
     }
