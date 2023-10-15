@@ -10,7 +10,7 @@ using System.Text;
 
 namespace JwtUser.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class AuthenticationController : ControllerBase
     {

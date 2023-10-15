@@ -48,6 +48,10 @@ namespace JwtUser.Repository.Repositories
                     throw new NullReferenceException();
                 }
             }
+            //else
+            //{
+            //    await _dbContext.Counties.AddAsync(matchingCounty);
+            //}
         }
 
         public async Task<(float AverageLatitude, float AverageLongitude)> AverageWreckLocation()
