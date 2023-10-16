@@ -21,8 +21,10 @@ namespace ATOM.Core.Entities
 
         [JsonIgnore]
         public Category Category { get; set; }
-
+        
         [JsonIgnore]
         public District District { get; set; }
+        public int? GatheringCenterId { get; set; }
+        public int? HelpCenterId { get; set; }
     }
 }

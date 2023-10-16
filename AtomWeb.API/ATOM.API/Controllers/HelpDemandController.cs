@@ -44,9 +44,9 @@ namespace ATOM.API.Controllers
 
         [HttpPost]
         [Route("test")]
-        public async Task<IActionResult> Test(HelpPopulationDto addHelpPopulationDto)
+        public async Task<IActionResult> AverageHelpPop(AddHelpDemandDto addHelpPopulationDto)
         {
-            await _helpDemandService.Test(addHelpPopulationDto);
+            await _helpDemandService.AverageHelpPop(addHelpPopulationDto);
             return Ok("Eklendi");
         }
     }

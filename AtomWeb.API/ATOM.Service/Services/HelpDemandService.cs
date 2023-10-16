@@ -31,9 +31,9 @@ namespace ATOM.Service.Services
             return await _helpDemandRepository.AverageHelpLocation(id);
         }
 
-        public async Task Test(HelpPopulationDto helpDemand)
+        public async Task AverageHelpPop(AddHelpDemandDto helpDemantDto)
         {
-            await _helpDemandRepository.Test(helpDemand);
+            await _helpDemandRepository.AverageHelpPop(helpDemantDto);
         }
     }
 }

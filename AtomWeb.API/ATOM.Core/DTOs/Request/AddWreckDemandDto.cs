@@ -28,7 +28,6 @@ namespace ATOM.Core.DTOs.Request
 
         public bool? IsClaimed { get; set; }
 
-
         [JsonIgnore]
         public DateTime Date { get; set; }
     }

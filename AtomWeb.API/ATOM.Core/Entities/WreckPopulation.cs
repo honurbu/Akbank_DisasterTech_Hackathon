@@ -10,7 +10,6 @@ namespace ATOM.Core.Entities
 {
     public class WreckPopulation : BaseEntity
     {
-
         [Column(TypeName = "decimal(8,6)")]
         public decimal Longitude { get; set; }        //boylam
 
@@ -19,7 +18,6 @@ namespace ATOM.Core.Entities
         public int People { get; set; }
         public bool? IsClaimed { get; set; }
         public int DistrictId { get; set; }
-
 
         [JsonIgnore]
         public District District { get; set; }

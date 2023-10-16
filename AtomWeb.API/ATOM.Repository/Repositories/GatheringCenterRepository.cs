@@ -48,7 +48,7 @@ namespace ATOM.Repository.Repositories
                 #endregion
 
             }
-
+            
             if (distanceKm > 0 && distanceKm < 8)
             {
                 return (closestHelpCenter!, distanceKm);

@@ -14,6 +14,8 @@ namespace ATOM.Core.DTOs.Request
         public AddHelpDemandDto()
         {
             this.Date = DateTime.Now;
+            HelpCenterId = null;
+            GatheringCenterId = null;
         }
 
         [Column(TypeName = "decimal(8,6)")]

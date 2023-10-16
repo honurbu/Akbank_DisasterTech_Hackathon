@@ -114,10 +114,6 @@ namespace ATOM.Repository.Repositories
             }
         }
 
-
-
-
-
         public async Task AverageWrackPop(AddWreckDemandDto wreckDemand)
         {
             var districtPopulation = await _dbContext.Districts.FirstOrDefaultAsync(x => x.Name == wreckDemand.DistrictName);
@@ -132,8 +128,7 @@ namespace ATOM.Repository.Repositories
                     DistrictId = districtPopulationId,
                     Latitude = wreckDemand.Latitude,
                     Longitude = wreckDemand.Longitude,
-                    People = 1,
-                    IsClaimed = false
+                    People = 1
                 };
                 await _dbContext.WreckPopulations.AddAsync(newWreck);
             }
@@ -148,15 +143,7 @@ namespace ATOM.Repository.Repositories
             }
             await _dbContext.SaveChangesAsync();
         }
-
-
-
-
-
-
-
-
-
+        
         public async Task<(decimal AverageLatitude, decimal AverageLongitude)> AverageWreckLocation()
         {
             decimal averageLatitude = await _dbContext.WreckDemands.AverageAsync(x => x.Latitude);
@@ -165,12 +152,10 @@ namespace ATOM.Repository.Repositories
             return (averageLatitude, averageLongitude);
         }
 
-
-
         public void ChangeStatus(int wreckPopId)
         {
             var values = _dbContext.WreckPopulations.Find(wreckPopId);
-            if(values!=null)
+            if (values != null)
             {
                 values.IsClaimed = true;
                 _dbContext.SaveChanges();
@@ -187,7 +172,7 @@ namespace ATOM.Repository.Repositories
 
             if (appUser != null)
             {
-                var nearestWreckPopulation = await _dbContext.WreckPopulations.Where(x=>x.IsClaimed==false).Include(x=>x.District).ThenInclude(x=>x.County)
+                var nearestWreckPopulation = await _dbContext.WreckPopulations.Where(x => x.IsClaimed == false).Include(x => x.District).ThenInclude(x => x.County)
                  .OrderBy(wp => Math.Pow((double)appUser.Latitude - (double)wp.Latitude, 2) + Math.Pow((double)appUser.Longitude - (double)wp.Longitude, 2))
                  .FirstAsync();
 
@@ -214,7 +199,5 @@ namespace ATOM.Repository.Repositories
         {
             return degrees * (Math.PI / 180);
         }
-
-       
     }
 }

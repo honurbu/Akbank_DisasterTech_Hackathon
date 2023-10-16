@@ -13,9 +13,7 @@ namespace ATOM.Core.Repositories
     {
         public Task AddHelpDemand(AddHelpDemandDto helpDemand);
 
-        public Task Test(HelpPopulationDto helpDemand);
-
         public Task<(decimal AverageLatitude, decimal AverageLongitude)> AverageHelpLocation(int id);
-
+        public Task AverageHelpPop(AddHelpDemandDto helpDemantDto);
     }
 }
