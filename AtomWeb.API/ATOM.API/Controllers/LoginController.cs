@@ -1,4 +1,5 @@
 ﻿using ATOM.Core.DTOs;
+using ATOM.Core.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -57,7 +58,40 @@ namespace ATOM.API.Controllers
             }
             return Unauthorized();
         }
-       
+        [HttpPost]
+        [Route("Register")]
+        public async Task<IActionResult> Register([FromBody] RegisterDto model)
+        {
+            var userExists = await _userManager.FindByNameAsync(model.UserName!);
+            if (userExists != null)
+
+                return StatusCode(StatusCodes.Status500InternalServerError, new ResponseDto
+                {
+                    Status = "Error",
+                    Message = "User Alreadys Exists !"
+                });
+
+            AppUser user = new()
+            {
+                Email = model.Email,
+                SecurityStamp = Guid.NewGuid().ToString(),
+                UserName = model.UserName,
+            };
+
+            var result = await _userManager.CreateAsync(user, model.Password!);
+            if (!result.Succeeded)
+                return StatusCode(StatusCodes.Status500InternalServerError, new ResponseDto
+                {
+                    Status = "Error",
+                    Message = "User creation failed! Please check user details and try again."
+                });
+
+            return Ok(new ResponseDto
+            {
+                Status = "Success",
+                Message = "User created successfully!"
+            });
+        }
         private JwtSecurityToken GetToken(List<Claim> authClaims)
         {
             var authSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:Secret"]));
@@ -72,6 +106,5 @@ namespace ATOM.API.Controllers
 
             return token;
         }
-
     }
 }

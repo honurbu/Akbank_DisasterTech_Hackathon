@@ -238,6 +238,38 @@ namespace ATOM.Repository.Migrations
                     b.ToTable("HelpDemands");
                 });
 
+            modelBuilder.Entity("ATOM.Core.Entities.HelpPopulation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DistrictId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Latitude")
+                        .HasColumnType("decimal(8,6)");
+
+                    b.Property<decimal>("Longitude")
+                        .HasColumnType("decimal(8,6)");
+
+                    b.Property<int>("People")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CategoryId");
+
+                    b.HasIndex("DistrictId");
+
+                    b.ToTable("HelpPopulations");
+                });
+
             modelBuilder.Entity("ATOM.Core.Entities.WreckDemand", b =>
                 {
                     b.Property<int>("Id")
@@ -263,6 +295,37 @@ namespace ATOM.Repository.Migrations
                     b.HasIndex("DistrictId");
 
                     b.ToTable("WreckDemands");
+                });
+
+            modelBuilder.Entity("ATOM.Core.Entities.WreckPopulation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("DistrictId")
+                        .HasColumnType("int");
+
+                    b.Property<bool?>("IsClaimed")
+                        .HasColumnType("bit");
+
+                    b.Property<decimal>("Latitude")
+                        .HasColumnType("decimal(8,6)");
+
+                    b.Property<decimal>("Longitude")
+                        .HasColumnType("decimal(8,6)");
+
+                    b.Property<int>("People")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DistrictId")
+                        .IsUnique();
+
+                    b.ToTable("WreckPopulations");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -475,6 +538,12 @@ namespace ATOM.Repository.Migrations
                 {
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
 
+                    b.Property<decimal?>("Latitude")
+                        .HasColumnType("decimal(8,6)");
+
+                    b.Property<decimal?>("Longitude")
+                        .HasColumnType("decimal(8,6)");
+
                     b.HasDiscriminator().HasValue("AppUser");
                 });
 
@@ -556,6 +625,25 @@ namespace ATOM.Repository.Migrations
                         .HasForeignKey("HelpCenterId");
                 });
 
+            modelBuilder.Entity("ATOM.Core.Entities.HelpPopulation", b =>
+                {
+                    b.HasOne("ATOM.Core.Entities.Category", "Category")
+                        .WithMany("HelpPopulations")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ATOM.Core.Entities.District", "District")
+                        .WithMany()
+                        .HasForeignKey("DistrictId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
+
+                    b.Navigation("District");
+                });
+
             modelBuilder.Entity("ATOM.Core.Entities.WreckDemand", b =>
                 {
                     b.HasOne("ATOM.Core.Entities.District", null)
@@ -563,6 +651,17 @@ namespace ATOM.Repository.Migrations
                         .HasForeignKey("DistrictId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("ATOM.Core.Entities.WreckPopulation", b =>
+                {
+                    b.HasOne("ATOM.Core.Entities.District", "District")
+                        .WithOne("WreckPopulation")
+                        .HasForeignKey("ATOM.Core.Entities.WreckPopulation", "DistrictId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("District");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -621,6 +720,8 @@ namespace ATOM.Repository.Migrations
                     b.Navigation("HelpCenterCategories");
 
                     b.Navigation("HelpDemands");
+
+                    b.Navigation("HelpPopulations");
                 });
 
             modelBuilder.Entity("ATOM.Core.Entities.CenterType", b =>
@@ -645,6 +746,9 @@ namespace ATOM.Repository.Migrations
                     b.Navigation("HelpDemands");
 
                     b.Navigation("WreckDemands");
+
+                    b.Navigation("WreckPopulation")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("ATOM.Core.Entities.GatheringCenter", b =>

@@ -8,7 +8,6 @@ namespace ATOM.Core.Entities
 {
     public class HelpDemand : AbstractDemand   //Talep
     {
-
         public int CategoryId { get; set; }
 
         public int? GatheringCenterId { get; set; }

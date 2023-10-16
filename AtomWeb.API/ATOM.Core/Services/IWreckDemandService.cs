@@ -1,4 +1,5 @@
-﻿using ATOM.Core.DTOs.Request;
+﻿using ATOM.Core.DTOs;
+using ATOM.Core.DTOs.Request;
 using ATOM.Core.Entities;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,11 @@ namespace ATOM.Core.Services
     {
         public Task AddWreckDemand(AddWreckDemandDto wreckDemand);
         public Task<(decimal AverageLatitude, decimal AverageLongitude)> AverageWreckLocation();
+        public Task AverageWrackPop(AddWreckDemandDto wreckDemand);
+
+        Task<(WreckPopulation, float distance)> GetWreckOperation(string id);
+
+        public void ChangeStatus(int wreckPopId);
 
     }
 }

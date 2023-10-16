@@ -1,4 +1,5 @@
-﻿using ATOM.Core.DTOs.Request;
+﻿using ATOM.Core.DTOs;
+using ATOM.Core.DTOs.Request;
 using ATOM.Core.Entities;
 using ATOM.Core.Repositories;
 using ATOM.Repository.Context;
@@ -61,7 +62,8 @@ namespace ATOM.Repository.Repositories
                         DistrictId = districtId,
                         CategoryId = helpDemand.CategoryId,
                         HelpCenterId = helpDemand.HelpCenterId,
-                        GatheringCenterId =helpDemand.GatheringCenterId  
+                        
+                        GatheringCenterId = helpDemand.GatheringCenterId  
                     };
                     _dbContext.HelpDemands.Add(helpDemands);
                     await _dbContext.SaveChangesAsync();
@@ -126,5 +128,55 @@ namespace ATOM.Repository.Repositories
 
             return (averageLatitude, averageLongitude);
         }
+
+
+        private async Task Deneme(HelpPopulation helpPopulation)
+        {
+
+        }
+
+
+
+
+
+
+
+
+        public async Task Test(HelpPopulationDto helpDemand)
+        {
+            var district = await _dbContext.Districts.FirstOrDefaultAsync(x => x.Name == helpDemand.DistrictName);
+            var districtId = district.Id;
+
+            var helpPop = await _dbContext.HelpPopulations.FirstOrDefaultAsync(x => x.DistrictId == districtId);
+
+            if (helpPop == null)
+            {
+                HelpPopulation newWreck = new HelpPopulation
+                {
+                    DistrictId = districtId,
+                    CategoryId = helpDemand.CategoryId,
+                    Latitude = helpDemand.Latitude,
+                    Longitude = helpDemand.Longitude,
+                    People = 1
+                };
+                await _dbContext.HelpPopulations.AddAsync(newWreck);
+            }
+            else
+            {
+                // Mahalleye ait kayıt var, enlem ve boylamı güncelle
+                helpPop.Latitude = ((helpPop.Latitude * helpPop.People) + helpDemand.Latitude) / (helpPop.People + 1);
+                helpPop.Longitude = ((helpPop.Longitude * helpPop.People) + helpDemand.Longitude) / (helpPop.People + 1);
+
+                // People sayısını artır
+                helpPop.People++;
+            }
+            await _dbContext.SaveChangesAsync();
+        }
+
+
+
+
+
+
     }
 }

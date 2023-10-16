@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CzbiNZkTEjt4kmPTpQPUM+jdgx7T+iHHHttfE/RukkCFMa9t5M17DurBJMZCEy2nQmcBftLtApnumJW+FrVOzw==",
+  "dgSpecHash": "ey2Ib/WRt3ydf+G/mNrSV8054wSgXUTdIHKoxfgbJcbek5eTr6+KCpOh4NtvlYIBJqrvD/gUgpVlwptpfqRvNg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Onur\\Desktop\\Akbank İlkay Repo\\AkbankDisasterTech-master\\AtomWeb.API\\ATOM.Repository\\ATOM.Repository.csproj",
+  "projectFilePath": "C:\\Users\\Onur\\Desktop\\Akbank İlkay Son Repo\\AkbankDisasterTech\\AtomWeb.API\\ATOM.Repository\\ATOM.Repository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Onur\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Onur\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

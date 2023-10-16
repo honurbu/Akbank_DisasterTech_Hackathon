@@ -1,4 +1,5 @@
-﻿using ATOM.Core.DTOs.Request;
+﻿using ATOM.Core.DTOs;
+using ATOM.Core.DTOs.Request;
 using ATOM.Core.Entities;
 using ATOM.Core.Repositories;
 using ATOM.Core.Services;
@@ -28,6 +29,11 @@ namespace ATOM.Service.Services
         public async Task<(decimal AverageLatitude, decimal AverageLongitude)> AverageHelpLocation(int id)
         {
             return await _helpDemandRepository.AverageHelpLocation(id);
+        }
+
+        public async Task Test(HelpPopulationDto helpDemand)
+        {
+            await _helpDemandRepository.Test(helpDemand);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using ATOM.Core.DTOs.Request;
+﻿using ATOM.Core.DTOs;
+using ATOM.Core.DTOs.Request;
 using ATOM.Core.Entities;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,8 @@ namespace ATOM.Core.Repositories
     public interface IHelpDemandRepository : IGenericRepository<HelpDemand>
     {
         public Task AddHelpDemand(AddHelpDemandDto helpDemand);
+
+        public Task Test(HelpPopulationDto helpDemand);
 
         public Task<(decimal AverageLatitude, decimal AverageLongitude)> AverageHelpLocation(int id);
 

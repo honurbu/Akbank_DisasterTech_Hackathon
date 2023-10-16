@@ -25,6 +25,9 @@ namespace ATOM.Core.Entities
         [JsonIgnore]
         public ICollection<WreckDemand> WreckDemands { get; set; }
 
+        [JsonIgnore]
+        public WreckPopulation WreckPopulation { get; set; }
+
 
     }
 }

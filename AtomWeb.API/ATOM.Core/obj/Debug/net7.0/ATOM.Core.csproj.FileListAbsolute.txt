@@ -34,3 +34,27 @@ C:\Users\Onur\Desktop\Akbank İlkay Repo\AkbankDisasterTech-master\AtomWeb.API\A
 C:\Users\Onur\Desktop\Akbank İlkay Repo\AkbankDisasterTech-master\AtomWeb.API\ATOM.CORE\obj\Debug\net7.0\refint\ATOM.Core.dll
 C:\Users\Onur\Desktop\Akbank İlkay Repo\AkbankDisasterTech-master\AtomWeb.API\ATOM.CORE\obj\Debug\net7.0\ATOM.Core.pdb
 C:\Users\Onur\Desktop\Akbank İlkay Repo\AkbankDisasterTech-master\AtomWeb.API\ATOM.CORE\obj\Debug\net7.0\ref\ATOM.Core.dll
+C:\Users\sekii\Source\Repos\Akbank_DisasterTech_Hackathon090\AtomWeb.API\ATOM.CORE\bin\Debug\net7.0\ATOM.Core.deps.json
+C:\Users\sekii\Source\Repos\Akbank_DisasterTech_Hackathon090\AtomWeb.API\ATOM.CORE\bin\Debug\net7.0\ATOM.Core.dll
+C:\Users\sekii\Source\Repos\Akbank_DisasterTech_Hackathon090\AtomWeb.API\ATOM.CORE\bin\Debug\net7.0\ATOM.Core.pdb
+C:\Users\sekii\Source\Repos\Akbank_DisasterTech_Hackathon090\AtomWeb.API\ATOM.CORE\obj\Debug\net7.0\ATOM.Core.csproj.AssemblyReference.cache
+C:\Users\sekii\Source\Repos\Akbank_DisasterTech_Hackathon090\AtomWeb.API\ATOM.CORE\obj\Debug\net7.0\ATOM.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sekii\Source\Repos\Akbank_DisasterTech_Hackathon090\AtomWeb.API\ATOM.CORE\obj\Debug\net7.0\ATOM.Core.AssemblyInfoInputs.cache
+C:\Users\sekii\Source\Repos\Akbank_DisasterTech_Hackathon090\AtomWeb.API\ATOM.CORE\obj\Debug\net7.0\ATOM.Core.AssemblyInfo.cs
+C:\Users\sekii\Source\Repos\Akbank_DisasterTech_Hackathon090\AtomWeb.API\ATOM.CORE\obj\Debug\net7.0\ATOM.Core.csproj.CoreCompileInputs.cache
+C:\Users\sekii\Source\Repos\Akbank_DisasterTech_Hackathon090\AtomWeb.API\ATOM.CORE\obj\Debug\net7.0\ATOM.Core.dll
+C:\Users\sekii\Source\Repos\Akbank_DisasterTech_Hackathon090\AtomWeb.API\ATOM.CORE\obj\Debug\net7.0\refint\ATOM.Core.dll
+C:\Users\sekii\Source\Repos\Akbank_DisasterTech_Hackathon090\AtomWeb.API\ATOM.CORE\obj\Debug\net7.0\ATOM.Core.pdb
+C:\Users\sekii\Source\Repos\Akbank_DisasterTech_Hackathon090\AtomWeb.API\ATOM.CORE\obj\Debug\net7.0\ref\ATOM.Core.dll
+C:\Users\sekii\Source\Repos\AkbankDisasterTech0000\AtomWeb.API\ATOM.CORE\bin\Debug\net7.0\ATOM.Core.deps.json
+C:\Users\sekii\Source\Repos\AkbankDisasterTech0000\AtomWeb.API\ATOM.CORE\bin\Debug\net7.0\ATOM.Core.dll
+C:\Users\sekii\Source\Repos\AkbankDisasterTech0000\AtomWeb.API\ATOM.CORE\bin\Debug\net7.0\ATOM.Core.pdb
+C:\Users\sekii\Source\Repos\AkbankDisasterTech0000\AtomWeb.API\ATOM.CORE\obj\Debug\net7.0\ATOM.Core.csproj.AssemblyReference.cache
+C:\Users\sekii\Source\Repos\AkbankDisasterTech0000\AtomWeb.API\ATOM.CORE\obj\Debug\net7.0\ATOM.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sekii\Source\Repos\AkbankDisasterTech0000\AtomWeb.API\ATOM.CORE\obj\Debug\net7.0\ATOM.Core.AssemblyInfoInputs.cache
+C:\Users\sekii\Source\Repos\AkbankDisasterTech0000\AtomWeb.API\ATOM.CORE\obj\Debug\net7.0\ATOM.Core.AssemblyInfo.cs
+C:\Users\sekii\Source\Repos\AkbankDisasterTech0000\AtomWeb.API\ATOM.CORE\obj\Debug\net7.0\ATOM.Core.csproj.CoreCompileInputs.cache
+C:\Users\sekii\Source\Repos\AkbankDisasterTech0000\AtomWeb.API\ATOM.CORE\obj\Debug\net7.0\ATOM.Core.dll
+C:\Users\sekii\Source\Repos\AkbankDisasterTech0000\AtomWeb.API\ATOM.CORE\obj\Debug\net7.0\refint\ATOM.Core.dll
+C:\Users\sekii\Source\Repos\AkbankDisasterTech0000\AtomWeb.API\ATOM.CORE\obj\Debug\net7.0\ATOM.Core.pdb
+C:\Users\sekii\Source\Repos\AkbankDisasterTech0000\AtomWeb.API\ATOM.CORE\obj\Debug\net7.0\ref\ATOM.Core.dll

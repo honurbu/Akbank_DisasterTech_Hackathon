@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "k6wiUgAGUgwVWxm74cM9DMPE+4ZeLpKWxtJA/RU3XGvUZIh+E98R5k1ZdoheQ+P2r0zCfsIqd2IHvSjjBog/9g==",
+  "dgSpecHash": "lI9x0/v3/7aefjHkdWEgfDAlJ2qoyao2kZ+S0oi4FcsAseznIx8fH7QqrSeSUUoHcxveZGN1RtqdMNixqfZ2XA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Onur\\Desktop\\Akbank İlkay Repo\\AkbankDisasterTech-master\\AtomWeb.API\\ATOM.API\\ATOM.API.csproj",
+  "projectFilePath": "C:\\Users\\Onur\\Desktop\\Akbank İlkay Son Repo\\AkbankDisasterTech\\AtomWeb.API\\ATOM.API\\ATOM.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Onur\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Onur\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
@@ -51,7 +51,10 @@
     "C:\\Users\\Onur\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\Onur\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\Onur\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\Onur\\.nuget\\packages\\scrutor\\3.3.0\\scrutor.3.3.0.nupkg.sha512",
     "C:\\Users\\Onur\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "C:\\Users\\Onur\\.nuget\\packages\\swashbuckle.aspnetcore.filters\\7.0.11\\swashbuckle.aspnetcore.filters.7.0.11.nupkg.sha512",
+    "C:\\Users\\Onur\\.nuget\\packages\\swashbuckle.aspnetcore.filters.abstractions\\7.0.11\\swashbuckle.aspnetcore.filters.abstractions.7.0.11.nupkg.sha512",
     "C:\\Users\\Onur\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
     "C:\\Users\\Onur\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
     "C:\\Users\\Onur\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",

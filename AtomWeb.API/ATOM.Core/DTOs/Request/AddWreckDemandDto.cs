@@ -13,6 +13,7 @@ namespace ATOM.Core.DTOs.Request
     {
         public AddWreckDemandDto()
         {
+            CountyName = "";
             this.Date = DateTime.Now;
         }
 
@@ -21,8 +22,12 @@ namespace ATOM.Core.DTOs.Request
 
         [Column(TypeName = "decimal(8,6)")]
         public decimal Latitude { get; set; }         //enlem
+
         public string DistrictName { get; set; }
-        public string CountyName { get; set; }      //???
+        public string? CountyName { get; set; }      //???
+
+        public bool? IsClaimed { get; set; }
+
 
         [JsonIgnore]
         public DateTime Date { get; set; }

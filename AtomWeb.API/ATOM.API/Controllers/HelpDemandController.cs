@@ -1,5 +1,7 @@
-﻿using ATOM.Core.DTOs.Request;
+﻿using ATOM.Core.DTOs;
+using ATOM.Core.DTOs.Request;
 using ATOM.Core.Services;
+using ATOM.Service.Services;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -38,6 +40,14 @@ namespace ATOM.API.Controllers
                 AverageLatitude = values.AverageLatitude,
                 AverageLongitude = values.AverageLongitude
             });
+        }
+
+        [HttpPost]
+        [Route("test")]
+        public async Task<IActionResult> Test(HelpPopulationDto addHelpPopulationDto)
+        {
+            await _helpDemandService.Test(addHelpPopulationDto);
+            return Ok("Eklendi");
         }
     }
 }

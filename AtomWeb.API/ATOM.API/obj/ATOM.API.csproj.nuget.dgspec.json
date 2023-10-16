@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Onur\\Desktop\\Akbank İlkay Repo\\AkbankDisasterTech-master\\AtomWeb.API\\ATOM.API\\ATOM.API.csproj": {}
+    "C:\\Users\\Onur\\Desktop\\Akbank İlkay Son Repo\\AkbankDisasterTech\\AtomWeb.API\\ATOM.API\\ATOM.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Onur\\Desktop\\Akbank İlkay Repo\\AkbankDisasterTech-master\\AtomWeb.API\\ATOM.API\\ATOM.API.csproj": {
+    "C:\\Users\\Onur\\Desktop\\Akbank İlkay Son Repo\\AkbankDisasterTech\\AtomWeb.API\\ATOM.API\\ATOM.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Onur\\Desktop\\Akbank İlkay Repo\\AkbankDisasterTech-master\\AtomWeb.API\\ATOM.API\\ATOM.API.csproj",
+        "projectUniqueName": "C:\\Users\\Onur\\Desktop\\Akbank İlkay Son Repo\\AkbankDisasterTech\\AtomWeb.API\\ATOM.API\\ATOM.API.csproj",
         "projectName": "ATOM.API",
-        "projectPath": "C:\\Users\\Onur\\Desktop\\Akbank İlkay Repo\\AkbankDisasterTech-master\\AtomWeb.API\\ATOM.API\\ATOM.API.csproj",
+        "projectPath": "C:\\Users\\Onur\\Desktop\\Akbank İlkay Son Repo\\AkbankDisasterTech\\AtomWeb.API\\ATOM.API\\ATOM.API.csproj",
         "packagesPath": "C:\\Users\\Onur\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Onur\\Desktop\\Akbank İlkay Repo\\AkbankDisasterTech-master\\AtomWeb.API\\ATOM.API\\obj\\",
+        "outputPath": "C:\\Users\\Onur\\Desktop\\Akbank İlkay Son Repo\\AkbankDisasterTech\\AtomWeb.API\\ATOM.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Onur\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Onur\\Desktop\\Akbank İlkay Repo\\AkbankDisasterTech-master\\AtomWeb.API\\ATOM.Service\\ATOM.Service.csproj": {
-                "projectPath": "C:\\Users\\Onur\\Desktop\\Akbank İlkay Repo\\AkbankDisasterTech-master\\AtomWeb.API\\ATOM.Service\\ATOM.Service.csproj"
+              "C:\\Users\\Onur\\Desktop\\Akbank İlkay Son Repo\\AkbankDisasterTech\\AtomWeb.API\\ATOM.Service\\ATOM.Service.csproj": {
+                "projectPath": "C:\\Users\\Onur\\Desktop\\Akbank İlkay Son Repo\\AkbankDisasterTech\\AtomWeb.API\\ATOM.Service\\ATOM.Service.csproj"
               }
             }
           }
@@ -61,6 +61,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"
+            },
+            "Swashbuckle.AspNetCore.Filters": {
+              "target": "Package",
+              "version": "[7.0.11, )"
             }
           },
           "imports": [
@@ -86,14 +90,14 @@
         }
       }
     },
-    "C:\\Users\\Onur\\Desktop\\Akbank İlkay Repo\\AkbankDisasterTech-master\\AtomWeb.API\\ATOM.CORE\\ATOM.Core.csproj": {
+    "C:\\Users\\Onur\\Desktop\\Akbank İlkay Son Repo\\AkbankDisasterTech\\AtomWeb.API\\ATOM.CORE\\ATOM.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Onur\\Desktop\\Akbank İlkay Repo\\AkbankDisasterTech-master\\AtomWeb.API\\ATOM.CORE\\ATOM.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Onur\\Desktop\\Akbank İlkay Son Repo\\AkbankDisasterTech\\AtomWeb.API\\ATOM.CORE\\ATOM.Core.csproj",
         "projectName": "ATOM.Core",
-        "projectPath": "C:\\Users\\Onur\\Desktop\\Akbank İlkay Repo\\AkbankDisasterTech-master\\AtomWeb.API\\ATOM.CORE\\ATOM.Core.csproj",
+        "projectPath": "C:\\Users\\Onur\\Desktop\\Akbank İlkay Son Repo\\AkbankDisasterTech\\AtomWeb.API\\ATOM.CORE\\ATOM.Core.csproj",
         "packagesPath": "C:\\Users\\Onur\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Onur\\Desktop\\Akbank İlkay Repo\\AkbankDisasterTech-master\\AtomWeb.API\\ATOM.CORE\\obj\\",
+        "outputPath": "C:\\Users\\Onur\\Desktop\\Akbank İlkay Son Repo\\AkbankDisasterTech\\AtomWeb.API\\ATOM.CORE\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Onur\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -147,14 +151,14 @@
         }
       }
     },
-    "C:\\Users\\Onur\\Desktop\\Akbank İlkay Repo\\AkbankDisasterTech-master\\AtomWeb.API\\ATOM.Repository\\ATOM.Repository.csproj": {
+    "C:\\Users\\Onur\\Desktop\\Akbank İlkay Son Repo\\AkbankDisasterTech\\AtomWeb.API\\ATOM.Repository\\ATOM.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Onur\\Desktop\\Akbank İlkay Repo\\AkbankDisasterTech-master\\AtomWeb.API\\ATOM.Repository\\ATOM.Repository.csproj",
+        "projectUniqueName": "C:\\Users\\Onur\\Desktop\\Akbank İlkay Son Repo\\AkbankDisasterTech\\AtomWeb.API\\ATOM.Repository\\ATOM.Repository.csproj",
         "projectName": "ATOM.Repository",
-        "projectPath": "C:\\Users\\Onur\\Desktop\\Akbank İlkay Repo\\AkbankDisasterTech-master\\AtomWeb.API\\ATOM.Repository\\ATOM.Repository.csproj",
+        "projectPath": "C:\\Users\\Onur\\Desktop\\Akbank İlkay Son Repo\\AkbankDisasterTech\\AtomWeb.API\\ATOM.Repository\\ATOM.Repository.csproj",
         "packagesPath": "C:\\Users\\Onur\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Onur\\Desktop\\Akbank İlkay Repo\\AkbankDisasterTech-master\\AtomWeb.API\\ATOM.Repository\\obj\\",
+        "outputPath": "C:\\Users\\Onur\\Desktop\\Akbank İlkay Son Repo\\AkbankDisasterTech\\AtomWeb.API\\ATOM.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Onur\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -171,8 +175,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Onur\\Desktop\\Akbank İlkay Repo\\AkbankDisasterTech-master\\AtomWeb.API\\ATOM.CORE\\ATOM.Core.csproj": {
-                "projectPath": "C:\\Users\\Onur\\Desktop\\Akbank İlkay Repo\\AkbankDisasterTech-master\\AtomWeb.API\\ATOM.CORE\\ATOM.Core.csproj"
+              "C:\\Users\\Onur\\Desktop\\Akbank İlkay Son Repo\\AkbankDisasterTech\\AtomWeb.API\\ATOM.CORE\\ATOM.Core.csproj": {
+                "projectPath": "C:\\Users\\Onur\\Desktop\\Akbank İlkay Son Repo\\AkbankDisasterTech\\AtomWeb.API\\ATOM.CORE\\ATOM.Core.csproj"
               }
             }
           }
@@ -222,14 +226,14 @@
         }
       }
     },
-    "C:\\Users\\Onur\\Desktop\\Akbank İlkay Repo\\AkbankDisasterTech-master\\AtomWeb.API\\ATOM.Service\\ATOM.Service.csproj": {
+    "C:\\Users\\Onur\\Desktop\\Akbank İlkay Son Repo\\AkbankDisasterTech\\AtomWeb.API\\ATOM.Service\\ATOM.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Onur\\Desktop\\Akbank İlkay Repo\\AkbankDisasterTech-master\\AtomWeb.API\\ATOM.Service\\ATOM.Service.csproj",
+        "projectUniqueName": "C:\\Users\\Onur\\Desktop\\Akbank İlkay Son Repo\\AkbankDisasterTech\\AtomWeb.API\\ATOM.Service\\ATOM.Service.csproj",
         "projectName": "ATOM.Service",
-        "projectPath": "C:\\Users\\Onur\\Desktop\\Akbank İlkay Repo\\AkbankDisasterTech-master\\AtomWeb.API\\ATOM.Service\\ATOM.Service.csproj",
+        "projectPath": "C:\\Users\\Onur\\Desktop\\Akbank İlkay Son Repo\\AkbankDisasterTech\\AtomWeb.API\\ATOM.Service\\ATOM.Service.csproj",
         "packagesPath": "C:\\Users\\Onur\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Onur\\Desktop\\Akbank İlkay Repo\\AkbankDisasterTech-master\\AtomWeb.API\\ATOM.Service\\obj\\",
+        "outputPath": "C:\\Users\\Onur\\Desktop\\Akbank İlkay Son Repo\\AkbankDisasterTech\\AtomWeb.API\\ATOM.Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Onur\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -246,8 +250,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Onur\\Desktop\\Akbank İlkay Repo\\AkbankDisasterTech-master\\AtomWeb.API\\ATOM.Repository\\ATOM.Repository.csproj": {
-                "projectPath": "C:\\Users\\Onur\\Desktop\\Akbank İlkay Repo\\AkbankDisasterTech-master\\AtomWeb.API\\ATOM.Repository\\ATOM.Repository.csproj"
+              "C:\\Users\\Onur\\Desktop\\Akbank İlkay Son Repo\\AkbankDisasterTech\\AtomWeb.API\\ATOM.Repository\\ATOM.Repository.csproj": {
+                "projectPath": "C:\\Users\\Onur\\Desktop\\Akbank İlkay Son Repo\\AkbankDisasterTech\\AtomWeb.API\\ATOM.Repository\\ATOM.Repository.csproj"
               }
             }
           }
