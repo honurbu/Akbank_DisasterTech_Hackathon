@@ -30,6 +30,10 @@ builder.Services.AddScoped<IHelpDemandService, HelpDemandService>();
 builder.Services.AddScoped(typeof(IHelpDemandRepository), typeof(HelpDemandRepository));
 
 
+builder.Services.AddScoped<IHelpCenterService, HelpCenterService>();
+builder.Services.AddScoped(typeof(IHelpCenterRepository), typeof(HelpCenterRepository));
+
+
 builder.Services.AddScoped<IWreckDemandService, WreckDemandService>();
 builder.Services.AddScoped(typeof(IWreckDemandRepository), typeof(WreckDemandRepository));
 

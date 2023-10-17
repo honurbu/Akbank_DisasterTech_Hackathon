@@ -773,11 +773,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Onur\\Desktop\\Ennnn Sonn Halll\\AkbankDisasterTech\\AtomWeb.API\\ATOM.CORE\\ATOM.Core.csproj",
+      "projectUniqueName": "C:\\Users\\Onur\\Desktop\\İlkayRepo\\AkbankDisasterTech\\AtomWeb.API\\ATOM.CORE\\ATOM.Core.csproj",
       "projectName": "ATOM.Core",
-      "projectPath": "C:\\Users\\Onur\\Desktop\\Ennnn Sonn Halll\\AkbankDisasterTech\\AtomWeb.API\\ATOM.CORE\\ATOM.Core.csproj",
+      "projectPath": "C:\\Users\\Onur\\Desktop\\İlkayRepo\\AkbankDisasterTech\\AtomWeb.API\\ATOM.CORE\\ATOM.Core.csproj",
       "packagesPath": "C:\\Users\\Onur\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Onur\\Desktop\\Ennnn Sonn Halll\\AkbankDisasterTech\\AtomWeb.API\\ATOM.CORE\\obj\\",
+      "outputPath": "C:\\Users\\Onur\\Desktop\\İlkayRepo\\AkbankDisasterTech\\AtomWeb.API\\ATOM.CORE\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Onur\\AppData\\Roaming\\NuGet\\NuGet.Config",

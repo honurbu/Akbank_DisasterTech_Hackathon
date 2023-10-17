@@ -19,6 +19,7 @@ C:\Users\sekii\OneDrive\Masaüstü\DisasterTechGitHub\AtomWeb.API\ATOM.API\obj\R
 C:\Users\sekii\OneDrive\Masaüstü\DisasterTechGitHub\AtomWeb.API\ATOM.API\obj\Release\net7.0\PubTmp\Out\Microsoft.EntityFrameworkCore.Abstractions.dll
 C:\Users\sekii\OneDrive\Masaüstü\DisasterTechGitHub\AtomWeb.API\ATOM.API\obj\Release\net7.0\PubTmp\Out\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\sekii\OneDrive\Masaüstü\DisasterTechGitHub\AtomWeb.API\ATOM.API\obj\Release\net7.0\PubTmp\Out\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\sekii\OneDrive\Masaüstü\DisasterTechGitHub\AtomWeb.API\ATOM.API\obj\Release\net7.0\PubTmp\Out\Microsoft.Extensions.DependencyModel.dll
 C:\Users\sekii\OneDrive\Masaüstü\DisasterTechGitHub\AtomWeb.API\ATOM.API\obj\Release\net7.0\PubTmp\Out\Microsoft.Extensions.Identity.Core.dll
 C:\Users\sekii\OneDrive\Masaüstü\DisasterTechGitHub\AtomWeb.API\ATOM.API\obj\Release\net7.0\PubTmp\Out\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\sekii\OneDrive\Masaüstü\DisasterTechGitHub\AtomWeb.API\ATOM.API\obj\Release\net7.0\PubTmp\Out\Microsoft.Extensions.Options.dll
@@ -33,6 +34,9 @@ C:\Users\sekii\OneDrive\Masaüstü\DisasterTechGitHub\AtomWeb.API\ATOM.API\obj\R
 C:\Users\sekii\OneDrive\Masaüstü\DisasterTechGitHub\AtomWeb.API\ATOM.API\obj\Release\net7.0\PubTmp\Out\Microsoft.OpenApi.dll
 C:\Users\sekii\OneDrive\Masaüstü\DisasterTechGitHub\AtomWeb.API\ATOM.API\obj\Release\net7.0\PubTmp\Out\Microsoft.SqlServer.Server.dll
 C:\Users\sekii\OneDrive\Masaüstü\DisasterTechGitHub\AtomWeb.API\ATOM.API\obj\Release\net7.0\PubTmp\Out\Microsoft.Win32.SystemEvents.dll
+C:\Users\sekii\OneDrive\Masaüstü\DisasterTechGitHub\AtomWeb.API\ATOM.API\obj\Release\net7.0\PubTmp\Out\Scrutor.dll
+C:\Users\sekii\OneDrive\Masaüstü\DisasterTechGitHub\AtomWeb.API\ATOM.API\obj\Release\net7.0\PubTmp\Out\Swashbuckle.AspNetCore.Filters.dll
+C:\Users\sekii\OneDrive\Masaüstü\DisasterTechGitHub\AtomWeb.API\ATOM.API\obj\Release\net7.0\PubTmp\Out\Swashbuckle.AspNetCore.Filters.Abstractions.dll
 C:\Users\sekii\OneDrive\Masaüstü\DisasterTechGitHub\AtomWeb.API\ATOM.API\obj\Release\net7.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\sekii\OneDrive\Masaüstü\DisasterTechGitHub\AtomWeb.API\ATOM.API\obj\Release\net7.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\sekii\OneDrive\Masaüstü\DisasterTechGitHub\AtomWeb.API\ATOM.API\obj\Release\net7.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll

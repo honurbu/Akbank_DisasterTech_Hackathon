@@ -16,5 +16,7 @@ namespace ATOM.Core.Repositories
         public Task AverageWrackPop(AddWreckDemandDto wreckDemand);
         public Task<(WreckPopulation, float distance)> GetWreckOperation(string id);
         public void ChangeStatus(int wreckPopId);
+
+        public Task<List<WreckDemand>> GetPeopleLocation(int wreckId);
     }
 }

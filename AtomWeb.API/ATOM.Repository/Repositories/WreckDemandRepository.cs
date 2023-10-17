@@ -156,48 +156,69 @@ namespace ATOM.Repository.Repositories
         {
             var values = _dbContext.WreckPopulations.Find(wreckPopId);
             if (values != null)
-            {
+            {   
                 values.IsClaimed = true;
                 _dbContext.SaveChanges();
             }
         }
 
+        public async Task<List<WreckDemand>> GetPeopleLocation(int wreckId)
+        {
+            var wrecks = await _dbContext.WreckPopulations.FindAsync(wreckId);
+            int distId =wrecks.DistrictId;
 
+            var values = await _dbContext.WreckDemands.Where(x=>x.DistrictId==distId).ToListAsync();
 
+            return values;
+
+        }
 
         public async Task<(WreckPopulation, float distance)> GetWreckOperation(string id)
         {
             var appUser = await _dbContext.AppUsers.FirstOrDefaultAsync(x => x.Id == id);
-            float distanceKm = 0;
+            double distanceKm = 0;
 
             if (appUser != null)
             {
-                var nearestWreckPopulation = await _dbContext.WreckPopulations.Where(x => x.IsClaimed == false).Include(x => x.District).ThenInclude(x => x.County)
-                 .OrderBy(wp => Math.Pow((double)appUser.Latitude - (double)wp.Latitude, 2) + Math.Pow((double)appUser.Longitude - (double)wp.Longitude, 2))
-                 .FirstAsync();
+                var nearestWreckPopulations = await _dbContext.WreckPopulations
+            .Where(x => x.IsClaimed == false)
+            .Include(x => x.District)
+            .ThenInclude(x => x.County)
+            .ToListAsync();
 
-                var radius = 6371;
-                var dLat = Deg2Rad((Convert.ToDouble(appUser.Latitude - nearestWreckPopulation.Latitude)));
-                var dLong = Deg2Rad((Convert.ToDouble(appUser.Longitude - nearestWreckPopulation.Longitude)));
+                var nearestWreckPopulation = nearestWreckPopulations
+                    .OrderBy(wp => CalculateDistance((double)appUser.Latitude, (double)appUser.Longitude, (double)wp.Latitude, (double)wp.Longitude))
+                    .First();
 
-                double a = Math.Sin(dLat / 2) * Math.Sin(dLat / 2) +
-                    Math.Cos(Deg2Rad(Convert.ToDouble(appUser.Latitude))) * Math.Cos(Deg2Rad(Convert.ToDouble(nearestWreckPopulation.Latitude))) *
-                    Math.Sin(dLong / 2) * Math.Sin(dLong / 2);
+                distanceKm = CalculateDistance((double)appUser.Latitude, (double)appUser.Longitude, (double)nearestWreckPopulation.Latitude, (double)nearestWreckPopulation.Longitude);
 
-                double c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
-                double d = radius * c;
-
-                distanceKm = (float)d;
-
-                return (nearestWreckPopulation, distanceKm);
+                return (nearestWreckPopulation, (float)distanceKm);
             }
 
             return (null, 0);
+        }
+
+        private double CalculateDistance(double lat1, double lon1, double lat2, double lon2)
+        {
+            var radius = 6371; // Dünya'nın yarıçapı (km)
+            var dLat = Deg2Rad(lat2 - lat1);
+            var dLon = Deg2Rad(lon2 - lon1);
+
+            var a = Math.Sin(dLat / 2) * Math.Sin(dLat / 2) +
+                    Math.Cos(Deg2Rad(lat1)) * Math.Cos(Deg2Rad(lat2)) *
+                    Math.Sin(dLon / 2) * Math.Sin(dLon / 2);
+
+            var c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
+            var distance = radius * c;
+
+            return distance;
         }
 
         private double Deg2Rad(double degrees)
         {
             return degrees * (Math.PI / 180);
         }
+
     }
 }
+

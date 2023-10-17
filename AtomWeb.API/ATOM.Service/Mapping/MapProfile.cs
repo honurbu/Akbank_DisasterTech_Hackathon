@@ -1,5 +1,6 @@
 ﻿using ATOM.Core.DTOs;
 using ATOM.Core.DTOs.Request;
+using ATOM.Core.DTOs.Response;
 using ATOM.Core.Entities;
 using AutoMapper;
 using System;
@@ -15,6 +16,9 @@ namespace ATOM.Service.Mapping
         public MapProfile()
         {
             CreateMap<HelpDemand, AddHelpDemandDto>().ReverseMap();
+            CreateMap<HelpCenter, AddHelpCenterDto>().ReverseMap();
+            CreateMap<HelpCenter, UpdateHelpCenterDto>().ReverseMap();
+            CreateMap<WreckDemand, PeopleLocationDto>().ReverseMap();
         }
     }
 }

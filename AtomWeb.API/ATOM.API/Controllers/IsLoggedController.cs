@@ -21,9 +21,18 @@ namespace ATOM.API.Controllers
 
         [Authorize]
         [HttpGet]
-        public IActionResult IsLogged()
+        public async Task<IActionResult> IsLogged()
         {
-            return Ok();
+            var userId = _httpContextAccessor.HttpContext!.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var values = await _appDbContext.AppUsers.FindAsync(userId);
+
+            var result = new
+            {
+                Latitude = values.Latitude,
+                Longitude = values.Longitude,
+            };
+
+            return Ok(result);
         }
     }
 }

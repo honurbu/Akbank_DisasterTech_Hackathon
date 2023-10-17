@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8KLyzAU38PXHcOfq5QSjBCHQ1zFZkc+MnZiM8DSvt1CazXJHFo/U1pv+F6Xit3a45dgXgZTd3D907+gJjR++BA==",
+  "dgSpecHash": "dxZtKt6+0Tf2IPm8Kpwp5nNU3jd0+/t7sUkK6CPXnENY7ktxBoDzsrheubhJv0OiHsYeDbrI1/fuaiKd9rFIBA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Onur\\Desktop\\Ennnn Sonn Halll\\AkbankDisasterTech\\AtomWeb.API\\ATOM.Service\\ATOM.Service.csproj",
+  "projectFilePath": "C:\\Users\\Onur\\Desktop\\İlkayRepo\\AkbankDisasterTech\\AtomWeb.API\\ATOM.Service\\ATOM.Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Onur\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Onur\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

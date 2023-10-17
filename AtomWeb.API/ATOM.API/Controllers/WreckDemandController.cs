@@ -57,18 +57,27 @@ namespace ATOM.API.Controllers
                     Distance = values.distance,
                     People = values.Item1.People,
                     District = values.Item1.District.Name,
-                    County = values.Item1.District.County.Name
+                    County = values.Item1.District.County.Name,
                 });
 
         }
 
         [Authorize]
-        [HttpPost]
+        [HttpGet]
         [Route("ChangeOperationStatus")]
         public IActionResult ChangeStatus(int id)
         {
             _wreckDemandService.ChangeStatus(id);
             return Ok();
+        }
+
+
+        [Authorize]
+        [HttpGet]
+        [Route("PeopleLocation")]
+        public async Task<IActionResult> GetPeopleLocation(int wreckId)
+        {
+            return Ok(await _wreckDemandService.GetPeopleLocation(wreckId));
         }
     }
 }

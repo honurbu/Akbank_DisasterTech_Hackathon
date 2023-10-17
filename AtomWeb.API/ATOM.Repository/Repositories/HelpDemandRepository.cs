@@ -62,8 +62,8 @@ namespace ATOM.Repository.Repositories
                         DistrictId = districtId,
                         CategoryId = helpDemand.CategoryId,
                         HelpCenterId = helpDemand.HelpCenterId,
-                        
-                        GatheringCenterId = helpDemand.GatheringCenterId  
+
+                        GatheringCenterId = helpDemand.GatheringCenterId
                     };
                     _dbContext.HelpDemands.Add(helpDemands);
                     await _dbContext.SaveChangesAsync();
@@ -142,7 +142,7 @@ namespace ATOM.Repository.Repositories
 
             var checkHelpPop = await _dbContext.HelpPopulations.FirstOrDefaultAsync(x => x.CategoryId == categoryId && x.DistrictId == districtId);
 
-           if (checkHelpPop == null)
+            if (checkHelpPop == null)
             {
                 if (helpDemantDto.HelpCenterId == null && helpDemantDto.GatheringCenterId == null)
                 {
@@ -159,62 +159,16 @@ namespace ATOM.Repository.Repositories
 
                     await _dbContext.HelpPopulations.AddAsync(helpPopulation);
                 }
-           }
-           else
-           {
-               checkHelpPop!.Latitude = ((checkHelpPop.Latitude * checkHelpPop.People) + helpDemantDto.Latitude) / (checkHelpPop.People + 1);
-               checkHelpPop!.Longitude = ((checkHelpPop.Longitude * checkHelpPop.People) + helpDemantDto.Longitude) / (checkHelpPop.People + 1);
-
-               checkHelpPop.People++;
-           }
-
-           await _dbContext.SaveChangesAsync();
-        }
-    }
-
-    /*
-     
-     public class HelpDemandProcessor
-{
-    private readonly YourDbContext _dbContext;
-
-    public HelpDemandProcessor(YourDbContext dbContext)
-    {
-        _dbContext = dbContext;
-    }
-
-    public async Task ProcessHelpDemand(HelpPopulationDto helpDemand)
-    {
-        var district = await _dbContext.Districts.FirstOrDefaultAsync(x => x.Name == helpDemand.DistrictName);
-        var districtId = district.Id;
-
-        var helpPop = await _dbContext.HelpPopulations.FirstOrDefaultAsync(x => x.DistrictId == districtId);
-
-        if (helpPop == null)
-        {
-            HelpPopulation newHelpPop = new HelpPopulation
+            }
+            else
             {
-                DistrictId = districtId,
-                CategoryId = helpDemand.CategoryId,
-                Latitude = helpDemand.Latitude,
-                Longitude = helpDemand.Longitude,
-                People = 1
-            };
-            await _dbContext.HelpPopulations.AddAsync(newHelpPop);
-        }
-        else
-        {
-            // Mahalleye ait kayıt var, enlem ve boylamı güncelle
-            helpPop.Latitude = ((helpPop.Latitude * helpPop.People) + helpDemand.Latitude) / (helpPop.People + 1);
-            helpPop.Longitude = ((helpPop.Longitude * helpPop.People) + helpDemand.Longitude) / (helpPop.People + 1);
+                checkHelpPop!.Latitude = ((checkHelpPop.Latitude * checkHelpPop.People) + helpDemantDto.Latitude) / (checkHelpPop.People + 1);
+                checkHelpPop!.Longitude = ((checkHelpPop.Longitude * checkHelpPop.People) + helpDemantDto.Longitude) / (checkHelpPop.People + 1);
 
-            // People sayısını artır
-            helpPop.People++;
+                checkHelpPop.People++;
+            }
+
+            await _dbContext.SaveChangesAsync();
         }
-        await _dbContext.SaveChangesAsync();
     }
-}
-
-     
-     */
 }

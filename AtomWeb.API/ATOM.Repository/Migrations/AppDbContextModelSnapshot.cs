@@ -36,7 +36,7 @@ namespace ATOM.Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
                 });
 
             modelBuilder.Entity("ATOM.Core.Entities.CenterType", b =>
@@ -53,7 +53,7 @@ namespace ATOM.Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CenterTypes");
+                    b.ToTable("CenterTypes", (string)null);
                 });
 
             modelBuilder.Entity("ATOM.Core.Entities.City", b =>
@@ -70,7 +70,7 @@ namespace ATOM.Repository.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Cities");
+                    b.ToTable("Cities", (string)null);
                 });
 
             modelBuilder.Entity("ATOM.Core.Entities.County", b =>
@@ -92,7 +92,7 @@ namespace ATOM.Repository.Migrations
 
                     b.HasIndex("CityId");
 
-                    b.ToTable("Counties");
+                    b.ToTable("Counties", (string)null);
                 });
 
             modelBuilder.Entity("ATOM.Core.Entities.District", b =>
@@ -114,7 +114,7 @@ namespace ATOM.Repository.Migrations
 
                     b.HasIndex("CountyId");
 
-                    b.ToTable("Districts");
+                    b.ToTable("Districts", (string)null);
                 });
 
             modelBuilder.Entity("ATOM.Core.Entities.GatheringCenter", b =>
@@ -142,7 +142,7 @@ namespace ATOM.Repository.Migrations
 
                     b.HasIndex("CenterTypeId");
 
-                    b.ToTable("GatheringCenters");
+                    b.ToTable("GatheringCenters", (string)null);
                 });
 
             modelBuilder.Entity("ATOM.Core.Entities.HelpCenter", b =>
@@ -170,7 +170,7 @@ namespace ATOM.Repository.Migrations
 
                     b.HasIndex("CenterTypeId");
 
-                    b.ToTable("HelpCenters");
+                    b.ToTable("HelpCenters", (string)null);
                 });
 
             modelBuilder.Entity("ATOM.Core.Entities.HelpCenterCategories", b =>
@@ -193,7 +193,7 @@ namespace ATOM.Repository.Migrations
 
                     b.HasIndex("HelpCenterId");
 
-                    b.ToTable("HelpCenterCategories");
+                    b.ToTable("HelpCenterCategories", (string)null);
                 });
 
             modelBuilder.Entity("ATOM.Core.Entities.HelpDemand", b =>
@@ -235,7 +235,7 @@ namespace ATOM.Repository.Migrations
 
                     b.HasIndex("HelpCenterId");
 
-                    b.ToTable("HelpDemands");
+                    b.ToTable("HelpDemands", (string)null);
                 });
 
             modelBuilder.Entity("ATOM.Core.Entities.HelpPopulation", b =>
@@ -277,7 +277,7 @@ namespace ATOM.Repository.Migrations
 
                     b.HasIndex("HelpCenterId");
 
-                    b.ToTable("HelpPopulations");
+                    b.ToTable("HelpPopulations", (string)null);
                 });
 
             modelBuilder.Entity("ATOM.Core.Entities.WreckDemand", b =>
@@ -304,7 +304,7 @@ namespace ATOM.Repository.Migrations
 
                     b.HasIndex("DistrictId");
 
-                    b.ToTable("WreckDemands");
+                    b.ToTable("WreckDemands", (string)null);
                 });
 
             modelBuilder.Entity("ATOM.Core.Entities.WreckPopulation", b =>
@@ -335,7 +335,7 @@ namespace ATOM.Repository.Migrations
                     b.HasIndex("DistrictId")
                         .IsUnique();
 
-                    b.ToTable("WreckPopulations");
+                    b.ToTable("WreckPopulations", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

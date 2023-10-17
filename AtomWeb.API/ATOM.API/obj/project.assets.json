@@ -3726,11 +3726,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Onur\\Desktop\\Ennnn Sonn Halll\\AkbankDisasterTech\\AtomWeb.API\\ATOM.API\\ATOM.API.csproj",
+      "projectUniqueName": "C:\\Users\\Onur\\Desktop\\İlkayRepo\\AkbankDisasterTech\\AtomWeb.API\\ATOM.API\\ATOM.API.csproj",
       "projectName": "ATOM.API",
-      "projectPath": "C:\\Users\\Onur\\Desktop\\Ennnn Sonn Halll\\AkbankDisasterTech\\AtomWeb.API\\ATOM.API\\ATOM.API.csproj",
+      "projectPath": "C:\\Users\\Onur\\Desktop\\İlkayRepo\\AkbankDisasterTech\\AtomWeb.API\\ATOM.API\\ATOM.API.csproj",
       "packagesPath": "C:\\Users\\Onur\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Onur\\Desktop\\Ennnn Sonn Halll\\AkbankDisasterTech\\AtomWeb.API\\ATOM.API\\obj\\",
+      "outputPath": "C:\\Users\\Onur\\Desktop\\İlkayRepo\\AkbankDisasterTech\\AtomWeb.API\\ATOM.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Onur\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3747,8 +3747,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Onur\\Desktop\\Ennnn Sonn Halll\\AkbankDisasterTech\\AtomWeb.API\\ATOM.Service\\ATOM.Service.csproj": {
-              "projectPath": "C:\\Users\\Onur\\Desktop\\Ennnn Sonn Halll\\AkbankDisasterTech\\AtomWeb.API\\ATOM.Service\\ATOM.Service.csproj"
+            "C:\\Users\\Onur\\Desktop\\İlkayRepo\\AkbankDisasterTech\\AtomWeb.API\\ATOM.Service\\ATOM.Service.csproj": {
+              "projectPath": "C:\\Users\\Onur\\Desktop\\İlkayRepo\\AkbankDisasterTech\\AtomWeb.API\\ATOM.Service\\ATOM.Service.csproj"
             }
           }
         }
