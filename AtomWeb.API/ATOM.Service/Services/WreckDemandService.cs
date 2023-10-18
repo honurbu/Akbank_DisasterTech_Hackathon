@@ -56,5 +56,10 @@ namespace ATOM.Service.Services
         {
             return await _wreckDemandRepository.GetWreckOperation(id);
         }
+
+        public async void RemoveWreck(int wreckPopId)
+        {
+            _wreckDemandRepository.RemoveWreck(wreckPopId);
+        }
     }
 }

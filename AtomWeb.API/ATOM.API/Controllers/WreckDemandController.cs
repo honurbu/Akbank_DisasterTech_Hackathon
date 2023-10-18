@@ -79,5 +79,15 @@ namespace ATOM.API.Controllers
         {
             return Ok(await _wreckDemandService.GetPeopleLocation(wreckId));
         }
+
+
+        [Authorize]
+        [HttpGet]
+        [Route("RemovePeopleLocation")]
+        public IActionResult RemoveWreck(int wreckId)
+        {
+            _wreckDemandService.RemoveWreck(wreckId);
+            return Ok();
+        }
     }
 }

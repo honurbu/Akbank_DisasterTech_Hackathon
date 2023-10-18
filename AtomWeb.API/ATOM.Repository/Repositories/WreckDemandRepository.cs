@@ -198,6 +198,16 @@ namespace ATOM.Repository.Repositories
             return (null, 0);
         }
 
+        public void RemoveWreck(int wreckPopId)
+        {
+            var wrecks =  _dbContext.WreckPopulations.Find(wreckPopId);
+            int distId = wrecks.DistrictId;
+
+            var values = _dbContext.WreckDemands.Where(x => x.DistrictId == distId).ToListAsync();
+
+            _dbContext.Remove(values);
+        }
+
         private double CalculateDistance(double lat1, double lon1, double lat2, double lon2)
         {
             var radius = 6371; // Dünya'nın yarıçapı (km)
