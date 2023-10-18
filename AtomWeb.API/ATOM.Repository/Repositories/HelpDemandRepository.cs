@@ -27,7 +27,6 @@ namespace ATOM.Repository.Repositories
 
             if (matchingCounty == null)
             {
-                // County veritabanında yoksa ekleyin
                 var newCounty = new County
                 {
                     Name = countyName,
@@ -36,10 +35,8 @@ namespace ATOM.Repository.Repositories
                 _dbContext.Counties.Add(newCounty);
                 await _dbContext.SaveChangesAsync();
 
-                // Yeni eklenen County'in ID'sini alın
                 var countyId = newCounty.Id;
 
-                // District veritabanında yoksa ekleyin
                 var matchingDistrict = _dbContext.Districts.FirstOrDefault(d => d.Name == districtName && d.CountyId == countyId);
                 if (matchingDistrict == null)
                 {
@@ -50,10 +47,8 @@ namespace ATOM.Repository.Repositories
                     };
                     _dbContext.Districts.Add(newDistrict);
                     await _dbContext.SaveChangesAsync();
-                    // Şimdi yeni District'in ID'sini alabilirsiniz.
                     var districtId = newDistrict.Id;
 
-                    // helpDemand eklemeyi gerçekleştirin
                     var helpDemands = new HelpDemand
                     {
                         Date = DateTime.Now,
@@ -71,10 +66,8 @@ namespace ATOM.Repository.Repositories
             }
             else
             {
-                // Var olan County'in ID'sini alın
                 var countyId = matchingCounty.Id;
 
-                // İlçeyi kontrol edin
                 var matchingDistrict = _dbContext.Districts.FirstOrDefault(d => d.Name == districtName && d.CountyId == countyId);
                 if (matchingDistrict == null)
                 {
@@ -85,10 +78,8 @@ namespace ATOM.Repository.Repositories
                     };
                     _dbContext.Districts.Add(newDistrict);
                     await _dbContext.SaveChangesAsync();
-                    // Şimdi yeni District'in ID'sini alabilirsiniz.
                     var districtId = newDistrict.Id;
 
-                    // helpDemand eklemeyi gerçekleştirin
                     var helpDemands = new HelpDemand
                     {
                         Date = DateTime.Now,
@@ -104,7 +95,6 @@ namespace ATOM.Repository.Repositories
                 }
                 else
                 {
-                    // District zaten mevcut, helpDemand eklemeyi gerçekleştirin
                     var helpDemands = new HelpDemand
                     {
                         Date = DateTime.Now,

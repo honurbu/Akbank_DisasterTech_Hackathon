@@ -1,3 +1,4 @@
+using ATOM.API.Modules;
 using ATOM.Core.Repositories;
 using ATOM.Core.Services;
 using ATOM.Core.UnitOfWork;
@@ -6,6 +7,8 @@ using ATOM.Repository.Repositories;
 using ATOM.Repository.UnitOfWork;
 using ATOM.Service.Mapping;
 using ATOM.Service.Services;
+using Autofac.Extensions.DependencyInjection;
+using Autofac;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -21,28 +24,35 @@ ConfigurationManager configuration = builder.Configuration;
 
 
 // Add services to the container.
-
-builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-builder.Services.AddScoped(typeof(IGenericService<>), typeof(GenericService<>));
-
-
-builder.Services.AddScoped<IHelpDemandService, HelpDemandService>();
-builder.Services.AddScoped(typeof(IHelpDemandRepository), typeof(HelpDemandRepository));
+//#region
+//builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+//builder.Services.AddScoped(typeof(IGenericService<>), typeof(GenericService<>));
 
 
-builder.Services.AddScoped<IHelpCenterService, HelpCenterService>();
-builder.Services.AddScoped(typeof(IHelpCenterRepository), typeof(HelpCenterRepository));
+//builder.Services.AddScoped<IHelpDemandService, HelpDemandService>();
+//builder.Services.AddScoped(typeof(IHelpDemandRepository), typeof(HelpDemandRepository));
 
 
-builder.Services.AddScoped<IWreckDemandService, WreckDemandService>();
-builder.Services.AddScoped(typeof(IWreckDemandRepository), typeof(WreckDemandRepository));
+//builder.Services.AddScoped<IHelpCenterService, HelpCenterService>();
+//builder.Services.AddScoped(typeof(IHelpCenterRepository), typeof(HelpCenterRepository));
 
 
-builder.Services.AddScoped<IGatheringCenterService, GatheringCenterService>();
-builder.Services.AddScoped(typeof(IGatheringCenterRepository), typeof(GatheringCenterRepository));
+//builder.Services.AddScoped<IWreckDemandService, WreckDemandService>();
+//builder.Services.AddScoped(typeof(IWreckDemandRepository), typeof(WreckDemandRepository));
 
-builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+//builder.Services.AddScoped<IGatheringCenterService, GatheringCenterService>();
+//builder.Services.AddScoped(typeof(IGatheringCenterRepository), typeof(GatheringCenterRepository));
+
+//builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+//#endregion 
 builder.Services.AddAutoMapper(typeof(MapProfile));
+
+builder.Host.UseServiceProviderFactory
+    (new AutofacServiceProviderFactory());
+builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder => containerBuilder.RegisterModule(new RepoServiceModule()));
+
+
 
 //Db created
 builder.Services.AddDbContext<AppDbContext>(x =>
@@ -83,7 +93,6 @@ builder.Services.AddAuthentication(options =>
 });
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddSwaggerGen(options =>

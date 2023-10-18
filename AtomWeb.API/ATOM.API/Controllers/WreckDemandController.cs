@@ -82,7 +82,7 @@ namespace ATOM.API.Controllers
 
 
         [Authorize]
-        [HttpGet]
+        [HttpDelete]
         [Route("RemovePeopleLocation")]
         public IActionResult RemoveWreck(int wreckId)
         {

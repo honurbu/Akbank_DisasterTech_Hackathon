@@ -4,6 +4,8 @@ C:\Users\Onur\Desktop\İlkayRepo\AkbankDisasterTech\AtomWeb.API\ATOM.API\obj\Rel
 C:\Users\Onur\Desktop\İlkayRepo\AkbankDisasterTech\AtomWeb.API\ATOM.API\obj\Release\net7.0\PubTmp\Out\ATOM.API.dll
 C:\Users\Onur\Desktop\İlkayRepo\AkbankDisasterTech\AtomWeb.API\ATOM.API\obj\Release\net7.0\PubTmp\Out\ATOM.API.runtimeconfig.json
 C:\Users\Onur\Desktop\İlkayRepo\AkbankDisasterTech\AtomWeb.API\ATOM.API\obj\Release\net7.0\PubTmp\Out\ATOM.API.pdb
+C:\Users\Onur\Desktop\İlkayRepo\AkbankDisasterTech\AtomWeb.API\ATOM.API\obj\Release\net7.0\PubTmp\Out\Autofac.dll
+C:\Users\Onur\Desktop\İlkayRepo\AkbankDisasterTech\AtomWeb.API\ATOM.API\obj\Release\net7.0\PubTmp\Out\Autofac.Extensions.DependencyInjection.dll
 C:\Users\Onur\Desktop\İlkayRepo\AkbankDisasterTech\AtomWeb.API\ATOM.API\obj\Release\net7.0\PubTmp\Out\AutoMapper.dll
 C:\Users\Onur\Desktop\İlkayRepo\AkbankDisasterTech\AtomWeb.API\ATOM.API\obj\Release\net7.0\PubTmp\Out\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\Onur\Desktop\İlkayRepo\AkbankDisasterTech\AtomWeb.API\ATOM.API\obj\Release\net7.0\PubTmp\Out\Azure.Core.dll

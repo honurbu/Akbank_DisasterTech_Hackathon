@@ -550,3 +550,5 @@ C:\Users\Onur\Desktop\İlkayRepo\AkbankDisasterTech\AtomWeb.API\ATOM.API\obj\Rel
 C:\Users\Onur\Desktop\İlkayRepo\AkbankDisasterTech\AtomWeb.API\ATOM.API\obj\Release\net7.0\ATOM.API.pdb
 C:\Users\Onur\Desktop\İlkayRepo\AkbankDisasterTech\AtomWeb.API\ATOM.API\obj\Release\net7.0\ATOM.API.genruntimeconfig.cache
 C:\Users\Onur\Desktop\İlkayRepo\AkbankDisasterTech\AtomWeb.API\ATOM.API\obj\Release\net7.0\ref\ATOM.API.dll
+C:\Users\Onur\Desktop\İlkayRepo\AkbankDisasterTech\AtomWeb.API\ATOM.API\bin\Release\net7.0\Autofac.dll
+C:\Users\Onur\Desktop\İlkayRepo\AkbankDisasterTech\AtomWeb.API\ATOM.API\bin\Release\net7.0\Autofac.Extensions.DependencyInjection.dll

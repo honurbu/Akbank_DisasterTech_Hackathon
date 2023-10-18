@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "SqM7FGg+XGl1GSHQ0dnzYuSgj8EqimPaQYltVcYvRKBYaLVd9hVh7pu1sOl5hJAVO0akjWhrCJ9bG2JWTjEzow==",
+  "dgSpecHash": "6HEuksdGq5Gla0Lbz2YnQGIMLkvwBoV1WVYed1ncloKkF+hT+pR3rOzdIZHcW+h97CGZtzXDNgDHoaLGB8/LoA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Onur\\Desktop\\İlkayRepo\\AkbankDisasterTech\\AtomWeb.API\\ATOM.API\\ATOM.API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Onur\\.nuget\\packages\\autofac\\6.4.0\\autofac.6.4.0.nupkg.sha512",
+    "C:\\Users\\Onur\\.nuget\\packages\\autofac.extensions.dependencyinjection\\8.0.0\\autofac.extensions.dependencyinjection.8.0.0.nupkg.sha512",
     "C:\\Users\\Onur\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Onur\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\Onur\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",

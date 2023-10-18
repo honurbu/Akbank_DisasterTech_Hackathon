@@ -28,7 +28,6 @@ namespace ATOM.Repository.Repositories
 
             if (matchingCounty == null)
             {
-                // County veritabanında yoksa ekleyin
                 var newCounty = new County
                 {
                     Name = countyName,
@@ -37,10 +36,8 @@ namespace ATOM.Repository.Repositories
                 _dbContext.Counties.Add(newCounty);
                 await _dbContext.SaveChangesAsync();
 
-                // Yeni eklenen County'in ID'sini alın
                 var countyId = newCounty.Id;
 
-                // District veritabanında yoksa ekleyin
                 var matchingDistrict = _dbContext.Districts.FirstOrDefault(d => d.Name == districtName && d.CountyId == countyId);
                 if (matchingDistrict == null)
                 {
@@ -51,10 +48,8 @@ namespace ATOM.Repository.Repositories
                     };
                     _dbContext.Districts.Add(newDistrict);
                     await _dbContext.SaveChangesAsync();
-                    // Şimdi yeni District'in ID'sini alabilirsiniz.
                     var districtId = newDistrict.Id;
 
-                    // WreckDemand eklemeyi gerçekleştirin
                     var wreckDemands = new WreckDemand
                     {
                         Date = DateTime.Now,
@@ -68,10 +63,8 @@ namespace ATOM.Repository.Repositories
             }
             else
             {
-                // Var olan County'in ID'sini alın
                 var countyId = matchingCounty.Id;
 
-                // İlçeyi kontrol edin
                 var matchingDistrict = _dbContext.Districts.FirstOrDefault(d => d.Name == districtName && d.CountyId == countyId);
                 if (matchingDistrict == null)
                 {
@@ -82,10 +75,8 @@ namespace ATOM.Repository.Repositories
                     };
                     _dbContext.Districts.Add(newDistrict);
                     await _dbContext.SaveChangesAsync();
-                    // Şimdi yeni District'in ID'sini alabilirsiniz.
                     var districtId = newDistrict.Id;
 
-                    // WreckDemand eklemeyi gerçekleştirin
                     var wreckDemands = new WreckDemand
                     {
                         Date = DateTime.Now,
@@ -98,7 +89,6 @@ namespace ATOM.Repository.Repositories
                 }
                 else
                 {
-                    // District zaten mevcut, WreckDemand eklemeyi gerçekleştirin
                     var wreckDemands = new WreckDemand
                     {
                         Date = DateTime.Now,
@@ -134,11 +124,9 @@ namespace ATOM.Repository.Repositories
             }
             else
             {
-                // Mahalleye ait kayıt var, enlem ve boylamı güncelle
                 wrackPop.Latitude = ((wrackPop.Latitude * wrackPop.People) + wreckDemand.Latitude) / (wrackPop.People + 1);
                 wrackPop.Longitude = ((wrackPop.Longitude * wrackPop.People) + wreckDemand.Longitude) / (wrackPop.People + 1);
 
-                // People sayısını artır
                 wrackPop.People++;
             }
             await _dbContext.SaveChangesAsync();
@@ -203,14 +191,18 @@ namespace ATOM.Repository.Repositories
             var wrecks =  _dbContext.WreckPopulations.Find(wreckPopId);
             int distId = wrecks.DistrictId;
 
-            var values = _dbContext.WreckDemands.Where(x => x.DistrictId == distId).ToListAsync();
+            var values = _dbContext.WreckDemands.Where(x => x.DistrictId == distId).ToList();
+            foreach(var item in values)
+            {
+                _dbContext.Remove(item);
+                _dbContext.SaveChanges();
+            }
 
-            _dbContext.Remove(values);
         }
 
         private double CalculateDistance(double lat1, double lon1, double lat2, double lon2)
         {
-            var radius = 6371; // Dünya'nın yarıçapı (km)
+            var radius = 6371; 
             var dLat = Deg2Rad(lat2 - lat1);
             var dLon = Deg2Rad(lon2 - lon1);
 

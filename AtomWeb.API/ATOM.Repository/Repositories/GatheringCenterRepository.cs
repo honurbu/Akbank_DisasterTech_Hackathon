@@ -1,4 +1,5 @@
-﻿using ATOM.Core.Entities;
+﻿using ATOM.Core.DTOs.Response;
+using ATOM.Core.Entities;
 using ATOM.Core.Repositories;
 using ATOM.Repository.Context;
 using Microsoft.EntityFrameworkCore;
@@ -92,12 +93,6 @@ namespace ATOM.Repository.Repositories
 
                 return (closestGatheringCenter, distanceKm);
             }
-        }
-
-        public Task<List<BaseCenter>> NearGatheringCenters(decimal longitude, decimal latitude)
-        {
-     
-            throw new NotImplementedException();
         }
 
         private static double Deg2Rad(double deg)
