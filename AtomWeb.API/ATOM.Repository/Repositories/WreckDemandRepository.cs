@@ -195,9 +195,9 @@ namespace ATOM.Repository.Repositories
             foreach(var item in values)
             {
                 _dbContext.Remove(item);
-                _dbContext.SaveChanges();
             }
-
+            _dbContext.Remove(wrecks);
+            _dbContext.SaveChanges();
         }
 
         private double CalculateDistance(double lat1, double lon1, double lat2, double lon2)
